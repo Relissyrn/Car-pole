@@ -1,0 +1,23 @@
+{
+  "seed": 0,
+  "total_timesteps": 1500000,
+  "num_envs": 8,
+  "control_dt": 0.01,
+  "ppo_kwargs": {
+    "policy": "MlpPolicy",
+    "learning_rate": 0.0003,
+    "n_steps": 1024,
+    "batch_size": 256,
+    "gamma": 0.99,
+    "gae_lambda": 0.95,
+    "n_epochs": 10,
+    "clip_range": 0.2,
+    "ent_coef": 0.0,
+    "vf_coef": 0.5,
+    "max_grad_norm": 0.5,
+    "seed": 0,
+    "verbose": 1,
+    "tensorboard_log": "C:\\Users\\artgu\\Downloads\\glfw-3.5.1.bin.WIN64\\runs"
+  },
+  "tensorboard_run_dir": "C:\\Users\\artgu\\Downloads\\glfw-3.5.1.bin.WIN64\\runs\\car_forward_2"
+}
