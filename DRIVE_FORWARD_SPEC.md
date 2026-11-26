@@ -1,5 +1,9 @@
 # Drive Forward to Finish Line
 
+> Legacy task specification. New experiments should use the shared box-pushing
+> environment in [BOX_PUSH_SPEC.md](BOX_PUSH_SPEC.md); this document describes
+> only the retained forward-driving baseline.
+
 This specification is written before implementation. If later metrics conflict
 with it, the specification takes precedence.
 

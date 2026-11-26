@@ -1,0 +1,39 @@
+{
+  "seed": 2,
+  "requested_total_timesteps": 1500000,
+  "actual_total_timesteps": 1507328,
+  "requested_easy_steps": 250000,
+  "actual_easy_steps": 253952,
+  "actual_randomized_steps": 1253376,
+  "num_envs": 8,
+  "target": [
+    3.0,
+    0.0
+  ],
+  "success_radius": 0.45,
+  "success_hold_steps": 5,
+  "max_steps": 700,
+  "action_latency_steps": 0,
+  "action_noise_std": 0.0,
+  "box_mass_scale": 1.0,
+  "friction_scale": 1.0,
+  "physics_timestep_s": 0.002,
+  "frame_skip": 5,
+  "ppo_kwargs": {
+    "policy": "MlpPolicy",
+    "learning_rate": 0.0003,
+    "n_steps": 1024,
+    "batch_size": 256,
+    "gamma": 0.99,
+    "gae_lambda": 0.95,
+    "n_epochs": 10,
+    "clip_range": 0.2,
+    "ent_coef": 0.0,
+    "vf_coef": 0.5,
+    "max_grad_norm": 0.5,
+    "seed": 2,
+    "verbose": 1,
+    "tensorboard_log": "runs\\box_push\\seed_2\\tensorboard"
+  },
+  "tensorboard_run_dir": "runs\\box_push\\seed_2\\tensorboard\\box_push_1"
+}

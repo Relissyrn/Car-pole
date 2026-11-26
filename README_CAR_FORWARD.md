@@ -1,5 +1,9 @@
 # MuJoCo Car Forward Training
 
+This is the retained forward-driving baseline. New task development and
+experiments use the shared box-pushing environment described in
+[BOX_PUSH_SPEC.md](BOX_PUSH_SPEC.md).
+
 The environment, vehicle model, training script, and evaluator implement the
 requirements in [DRIVE_FORWARD_SPEC.md](DRIVE_FORWARD_SPEC.md).
 
