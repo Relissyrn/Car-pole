@@ -24,11 +24,11 @@ class BoxPushSettings:
     max_steps: int = MAX_STEPS
     frame_skip: int = FRAME_SKIP
     max_box_height: float = 0.28
-    max_box_speed: float = 1.5
+    max_box_speed: float = 0.5
     box_floor_friction: float = 0.35
     car_speed_limit: float = 1.0
-    car_speed_penalty_per_second: float = 1.0
-    lost_bumper_contact_penalty: float = 1.0
+    car_speed_penalty_per_second: float = 5.0
+    lost_bumper_contact_penalty: float = 3.0
     target_overshoot_penalty: float = 2.0
     lidar_num_rays: int = LIDAR_NUM_RAYS
     lidar_max_range: float = 4.0
@@ -238,6 +238,24 @@ class BoxPushEnv(gym.Env):
             and current_distance > self.settings.success_radius
         )
 
+    def _box_fits_target_zone(self, box_position, box_yaw):
+        half_box_x, half_box_y = self.model.geom_size[self.box_geom_id, :2]
+        cos_yaw = abs(np.cos(box_yaw))
+        sin_yaw = abs(np.sin(box_yaw))
+        box_half_extent = np.array(
+            (
+                cos_yaw * half_box_x + sin_yaw * half_box_y,
+                sin_yaw * half_box_x + cos_yaw * half_box_y,
+            ),
+            dtype=np.float64,
+        )
+        return bool(
+            np.all(
+                np.abs(box_position - self.target) + box_half_extent
+                <= self.settings.success_radius
+            )
+        )
+
     def _has_front_bumper_contact(self):
         car_position = self.data.xpos[self.car_id, :2]
         car_yaw = _yaw_from_quaternion(self.data.xquat[self.car_id])
@@ -431,6 +449,7 @@ class BoxPushEnv(gym.Env):
 
         car_position = self.data.xpos[self.car_id, :2].copy()
         box_position = self.data.xpos[self.box_id, :2].copy()
+        box_yaw = _yaw_from_quaternion(self.data.xquat[self.box_id])
         car_velocity = self._body_velocity(self.car_id)
         car_speed = float(np.linalg.norm(car_velocity[3:5]))
         car_speed_penalty = (
@@ -454,6 +473,9 @@ class BoxPushEnv(gym.Env):
         )
         car_box_distance = float(np.linalg.norm(box_position - car_position))
         box_target_distance = float(np.linalg.norm(self.target - box_position))
+        box_fits_target_zone = self._box_fits_target_zone(
+            box_position, box_yaw
+        )
         target_overshoot = self._box_crossed_target_zone(
             self._previous_box_position,
             box_position,
@@ -465,7 +487,10 @@ class BoxPushEnv(gym.Env):
         target_overshoot_penalty = (
             self.settings.target_overshoot_penalty * float(target_overshoot)
         )
-        if box_target_distance <= self.settings.success_radius and physically_controlled:
+        if (
+            box_fits_target_zone
+            and physically_controlled
+        ):
             self.success_steps += 1
         else:
             self.success_steps = 0
@@ -475,15 +500,21 @@ class BoxPushEnv(gym.Env):
         )
 
         if physically_controlled:
-            shaped_reward = 0.15 * (
-                self._previous_car_box_distance - car_box_distance
-            )
             box_target_progress = (
                 self._previous_box_target_distance - box_target_distance
             )
-            shaped_reward += box_target_progress
+            box_target_progress_reward = (
+                box_target_progress
+                if bumper_contact
+                else min(0.0, box_target_progress)
+            )
+            shaped_reward = (
+                0.15 * (self._previous_car_box_distance - car_box_distance)
+                + box_target_progress_reward
+            )
         else:
             shaped_reward = 0.0
+            box_target_progress_reward = 0.0
         reward = (
             shaped_reward
             - 0.01
@@ -507,6 +538,8 @@ class BoxPushEnv(gym.Env):
             "termination_reason": reason,
             "car_box_distance": car_box_distance,
             "box_target_distance": box_target_distance,
+            "box_target_progress_reward": box_target_progress_reward,
+            "box_fits_target_zone": box_fits_target_zone,
             "success_steps": self.success_steps,
             "car_speed": car_speed,
             "car_speed_penalty": car_speed_penalty,

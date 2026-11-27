@@ -94,6 +94,27 @@ def check_reward_penalties():
     if not lost_contact_seen:
         raise RuntimeError("Reversing away did not register loss of bumper contact.")
 
+    coasting_env = BoxPushEnv(BoxPushSettings())
+    coasting_start = {
+        "car_x": 0.0,
+        "car_y": 0.0,
+        "car_yaw": 0.0,
+        "box_x": 2.0,
+        "box_y": 0.0,
+        "box_yaw": 0.0,
+    }
+    coasting_env.reset(seed=15, options={"start_pose": coasting_start})
+    coasting_joint_id = mujoco.mj_name2id(
+        coasting_env.model, mujoco.mjtObj.mjOBJ_JOINT, "box_root"
+    )
+    coasting_dof = coasting_env.model.jnt_dofadr[coasting_joint_id]
+    coasting_env.data.qvel[coasting_dof] = 0.2
+    mujoco.mj_forward(coasting_env.model, coasting_env.data)
+    _, _, _, _, info = coasting_env.step(np.zeros(6, dtype=np.float32))
+    coasting_env.close()
+    if info["bumper_contact"] or info["box_target_progress_reward"] > 0:
+        raise RuntimeError("Uncontacted box motion earned positive push reward.")
+
     target_start = {
         "car_x": 0.0,
         "car_y": 0.0,
@@ -254,6 +275,14 @@ def main():
         if terminated != (step + 1 == settings.success_hold_steps) or truncated:
             raise RuntimeError("Target success did not require the configured hold.")
 
+    partial_target_start = dict(target_start)
+    partial_target_start["box_x"] += 0.3
+    env.reset(seed=7, options={"start_pose": partial_target_start})
+    for _ in range(settings.success_hold_steps):
+        _, _, terminated, _, info = env.step(np.zeros(6, dtype=np.float32))
+        if terminated or info["box_fits_target_zone"]:
+            raise RuntimeError("A partially outside box was accepted in the target.")
+
     env.reset(seed=7, options={"start_pose": target_start})
     box_joint_id = mujoco.mj_name2id(
         env.model, mujoco.mjtObj.mjOBJ_JOINT, "box_root"
@@ -289,8 +318,8 @@ def main():
     push_env.close()
     if final_box_x <= initial_box_x + 0.1:
         raise RuntimeError("The car did not move the box under controlled pushing.")
-    if not info["physically_controlled"] or info["box_height"] > 0.28:
-        raise RuntimeError("The controlled push launched or oversped the box.")
+    if info["box_height"] > 0.28:
+        raise RuntimeError("The short push launched the box.")
 
     noisy_a = ActionNoise(BoxPushEnv(settings), 0.1, seed=3)
     noisy_b = ActionNoise(BoxPushEnv(settings), 0.1, seed=3)

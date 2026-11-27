@@ -167,9 +167,10 @@ def main():
     parser.add_argument("--box-mass-scale", type=float, default=1.0)
     parser.add_argument("--friction-scale", type=float, default=1.0)
     parser.add_argument("--box-floor-friction", type=float, default=0.35)
+    parser.add_argument("--max-box-speed", type=float, default=0.5)
     parser.add_argument("--car-speed-limit", type=float, default=1.0)
-    parser.add_argument("--car-speed-penalty-per-second", type=float, default=1.0)
-    parser.add_argument("--lost-bumper-contact-penalty", type=float, default=1.0)
+    parser.add_argument("--car-speed-penalty-per-second", type=float, default=5.0)
+    parser.add_argument("--lost-bumper-contact-penalty", type=float, default=3.0)
     parser.add_argument("--target-overshoot-penalty", type=float, default=2.0)
     parser.add_argument("--lidar-num-rays", type=int, default=32)
     parser.add_argument("--lidar-max-range", type=float, default=4.0)
@@ -229,6 +230,7 @@ def main():
             success_hold_steps=args.success_hold_steps,
             max_steps=args.max_steps,
             frame_skip=args.frame_skip,
+            max_box_speed=args.max_box_speed,
             box_mass_scale=args.box_mass_scale,
             friction_scale=args.friction_scale,
             box_floor_friction=args.box_floor_friction,
@@ -299,6 +301,7 @@ def main():
             "success_radius": settings.success_radius,
             "success_hold_steps": settings.success_hold_steps,
             "max_steps": settings.max_steps,
+            "max_box_speed": settings.max_box_speed,
             "frame_skip": settings.frame_skip,
         },
         "tuning_effort": {

@@ -18,26 +18,28 @@ Gaussian range noise; no return is reported as maximum range. The car's own
 geometry is excluded from the scan. The box pose is not exposed directly to the
 policy. Actions are six finite values in `[-1, 1]`.
 
-The shaped reward is the change in car-to-box distance and box-to-target
-distance, plus a small `-0.01` step cost and a `+10` success reward. Success
-requires the box center to remain within the configurable target radius for
-five consecutive steps by default. Reward and success also require the box to
-remain near the ground and below the configurable speed limit, preventing
-airborne/high-speed motion from receiving a false push reward. Additional
-penalties discourage car speeds above 1 m/s, losing physical contact between
-the box and the front face of the car chassis (the bumper), and pushing the box
-through or out of the target zone. Defaults are a speed-penalty weight of 1.0,
-a 1.0 contact-loss penalty, and a 2.0 target-overshoot penalty. The speed
-penalty scales with excess speed and elapsed control time; contact-loss and
-target-overshoot penalties are applied once per event.
+The shaped reward uses progress toward the box and target, plus a small
+`-0.01` step cost and a `+10` success reward. Positive box-to-target progress
+is credited only while the front bumper contacts the box; moving the box
+toward the target after a kick does not earn that reward. Success requires the
+box's full yaw-adjusted footprint to fit inside the square target zone for five
+consecutive steps by default. Reward shaping and success also require the box
+to remain near the ground and below the configurable speed limit, which
+defaults to `0.5 m/s`. Additional penalties discourage car speeds above
+`1 m/s`, losing physical contact between the box and the front face of the car
+chassis (the bumper), and pushing the box through or out of the target zone.
+Defaults are a speed-penalty weight of `5.0`, a `3.0` contact-loss penalty,
+and a `2.0` target-overshoot penalty. The speed penalty scales with excess
+speed and elapsed control time; contact-loss and target-overshoot penalties
+are applied once per event.
 
 ## Curriculum and settings
 
-`BoxPushSettings` centralizes target location, target-zone radius, success hold
-time, horizon, frame skip, speed and event penalty weights, physics mismatch
-scales, and curriculum stage. The easy stage starts aligned and near the
-target. The randomized stage varies car/box lateral offsets, headings, and box
-distance.
+`BoxPushSettings` centralizes target location and square-zone half-width,
+success hold time, horizon, frame skip, box speed limit, speed and event
+penalty weights, physics mismatch scales, and curriculum stage. The easy stage
+starts aligned and near the target. The randomized stage varies car/box lateral
+offsets, headings, and box distance.
 `reset(options={"start_pose": ...})` supports exact reproducible starts.
 
 `ActionLatency` delays actions by a configurable number of control steps.
@@ -65,15 +67,17 @@ Install the existing project dependencies (`mujoco`, `gymnasium`,
 By default, each run spends 250,000 steps in the easy stage and the remaining
 steps in randomized starts. `--easy-steps`, `--timesteps`, `--num-envs`,
 `--target-x`, `--target-y`, `--success-radius`, `--success-hold-steps`,
-`--max-steps`, `--frame-skip`, `--latency-steps`, `--noise-std`,
-`--box-mass-scale`, and `--friction-scale` are configurable. PPO collects full
-rollout batches, so the actual count can exceed the requested budget; the config
-records both counts and the actual steps in each stage.
+`--max-steps`, `--frame-skip`, `--max-box-speed`, `--latency-steps`,
+`--noise-std`, `--box-mass-scale`, and `--friction-scale` are configurable. PPO
+collects full rollout batches, so the actual count can exceed the requested
+budget; the config records both counts and the actual steps in each stage.
 `--box-floor-friction` adjusts the carton/floor sliding coefficient; keep it the
 same for training and evaluation runs being compared.
 The speed and event penalties are configurable with `--car-speed-limit`,
 `--car-speed-penalty-per-second`, `--lost-bumper-contact-penalty`, and
 `--target-overshoot-penalty`.
+Use the same `--max-box-speed` setting for training and evaluation when
+comparing policies.
 The sensor is configurable with `--lidar-num-rays`, `--lidar-max-range`, and
 `--lidar-noise-std`. Policies trained with the previous direct box-pose
 observation are incompatible and must not be evaluated in this sensor setup.
@@ -182,6 +186,11 @@ The five policies were evaluated on the same 20 fixed starts (100 episodes):
 
 All 88 failures were timeouts.
 
+These policies and results predate the stricter `0.5 m/s` box speed limit,
+contact-gated positive target progress, and full-footprint square-zone success
+rule described above. They do not validate or reflect those corrections and
+must be retrained before drawing conclusions about them.
+
 - [Evaluation report](results/lidar_carton035_rewardv2.json)
 - [All 100 episode records](results/lidar_carton035_rewardv2.csv)
 - [Fixed-start heat map](results/lidar_carton035_rewardv2.svg)
@@ -200,11 +209,13 @@ observations and are not directly comparable with the later experiments.
 None of the experiments solves the task reliably. The second experiment had
 10% success and the third had 12%; this small difference is not evidence that
 the new penalties improve performance. Returns are also affected by the changed
-reward function. The first experiment's latency, noise, and mismatch
+reward function. In particular, the third experiment used the earlier
+center-only success check and weaker speed/contact penalties. The first
+experiment's latency, noise, and mismatch
 evaluations apply perturbations to the same nominal-trained policies; they are
 robustness checks, not results from separately trained variants. PPO settings,
-seeds, and training budgets were held constant, but no hyperparameter search or
-variant-specific tuning was performed. The `tuning_effort` values in the
+seeds, and training budgets were held constant, but no hyperparameter search
+or variant-specific tuning was performed. The `tuning_effort` values in the
 evaluation JSON are declared protocol metadata, not evidence that a tuning
 search was run. A fair comparison of separately tuned variants remains
 outstanding.
