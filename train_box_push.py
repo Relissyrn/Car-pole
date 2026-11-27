@@ -65,6 +65,14 @@ def main():
     parser.add_argument("--noise-std", type=float, default=0.0)
     parser.add_argument("--box-mass-scale", type=float, default=1.0)
     parser.add_argument("--friction-scale", type=float, default=1.0)
+    parser.add_argument("--box-floor-friction", type=float, default=0.35)
+    parser.add_argument("--car-speed-limit", type=float, default=1.0)
+    parser.add_argument("--car-speed-penalty-per-second", type=float, default=1.0)
+    parser.add_argument("--lost-bumper-contact-penalty", type=float, default=1.0)
+    parser.add_argument("--target-overshoot-penalty", type=float, default=2.0)
+    parser.add_argument("--lidar-num-rays", type=int, default=32)
+    parser.add_argument("--lidar-max-range", type=float, default=4.0)
+    parser.add_argument("--lidar-noise-std", type=float, default=0.01)
     args = parser.parse_args()
     if args.timesteps <= 0 or args.num_envs <= 0:
         parser.error("--timesteps and --num-envs must be positive.")
@@ -87,6 +95,14 @@ def main():
             frame_skip=args.frame_skip,
             box_mass_scale=args.box_mass_scale,
             friction_scale=args.friction_scale,
+            box_floor_friction=args.box_floor_friction,
+            car_speed_limit=args.car_speed_limit,
+            car_speed_penalty_per_second=args.car_speed_penalty_per_second,
+            lost_bumper_contact_penalty=args.lost_bumper_contact_penalty,
+            target_overshoot_penalty=args.target_overshoot_penalty,
+            lidar_num_rays=args.lidar_num_rays,
+            lidar_max_range=args.lidar_max_range,
+            lidar_noise_std=args.lidar_noise_std,
         )
     except ValueError as error:
         parser.error(str(error))
@@ -102,6 +118,14 @@ def main():
         "frame_skip": args.frame_skip,
         "box_mass_scale": args.box_mass_scale,
         "friction_scale": args.friction_scale,
+        "box_floor_friction": args.box_floor_friction,
+        "car_speed_limit": args.car_speed_limit,
+        "car_speed_penalty_per_second": args.car_speed_penalty_per_second,
+        "lost_bumper_contact_penalty": args.lost_bumper_contact_penalty,
+        "target_overshoot_penalty": args.target_overshoot_penalty,
+        "lidar_num_rays": args.lidar_num_rays,
+        "lidar_max_range": args.lidar_max_range,
+        "lidar_noise_std": args.lidar_noise_std,
     }
     ppo_kwargs = {
         "policy": "MlpPolicy",
@@ -187,6 +211,18 @@ def main():
                     "action_noise_std": args.noise_std,
                     "box_mass_scale": args.box_mass_scale,
                     "friction_scale": args.friction_scale,
+                    "box_floor_friction": args.box_floor_friction,
+                    "car_speed_limit": args.car_speed_limit,
+                    "car_speed_penalty_per_second": (
+                        args.car_speed_penalty_per_second
+                    ),
+                    "lost_bumper_contact_penalty": (
+                        args.lost_bumper_contact_penalty
+                    ),
+                    "target_overshoot_penalty": args.target_overshoot_penalty,
+                    "lidar_num_rays": args.lidar_num_rays,
+                    "lidar_max_range": args.lidar_max_range,
+                    "lidar_noise_std": args.lidar_noise_std,
                     "physics_timestep_s": 0.002,
                     "frame_skip": randomized_settings.frame_skip,
                     "ppo_kwargs": ppo_kwargs,

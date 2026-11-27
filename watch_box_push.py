@@ -9,7 +9,9 @@ from box_push import BoxPushSettings, make_environment
 from evaluate_box_push import fixed_evaluation_starts
 
 
-DEFAULT_MODEL = Path(__file__).with_name("models") / "box_push_seed_0.zip"
+DEFAULT_MODEL = (
+    Path(__file__).with_name("models") / "box_push_lidar_carton035_seed_0.zip"
+)
 
 
 def main():

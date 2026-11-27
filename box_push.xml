@@ -12,7 +12,8 @@
   </default>
 
   <worldbody>
-    <geom name="ground" type="plane" size="0 0 0.05" rgba="0.28 0.32 0.36 1"/>
+    <geom name="ground" type="plane" size="0 0 0.05"
+          friction="0.35 0.01 0.001" rgba="0.28 0.32 0.36 1"/>
     <geom name="target_zone" type="box" pos="2.2 0 0.008"
           size="0.45 0.45 0.008" rgba="0.1 0.8 0.15 0.45"
           contype="0" conaffinity="0"/>
@@ -55,19 +56,19 @@
     <body name="box" pos="0.9 0 0.16">
       <freejoint name="box_root"/>
       <geom name="push_box" type="box" size="0.22 0.22 0.16"
-            density="40" friction="1.5 0.01 0.001"
+            density="80" friction="0.35 0.01 0.001"
             rgba="0.12 0.38 0.92 1"/>
     </body>
   </worldbody>
 
   <actuator>
-    <motor name="drive_front_left" joint="wheel_front_left" gear="8"
+    <motor name="drive_front_left" joint="wheel_front_left" gear="6"
            ctrlrange="-1 1"/>
-    <motor name="drive_front_right" joint="wheel_front_right" gear="8"
+    <motor name="drive_front_right" joint="wheel_front_right" gear="6"
            ctrlrange="-1 1"/>
-    <motor name="drive_rear_left" joint="wheel_rear_left" gear="8"
+    <motor name="drive_rear_left" joint="wheel_rear_left" gear="6"
            ctrlrange="-1 1"/>
-    <motor name="drive_rear_right" joint="wheel_rear_right" gear="8"
+    <motor name="drive_rear_right" joint="wheel_rear_right" gear="6"
            ctrlrange="-1 1"/>
     <position name="steer_left" joint="steer_left" kp="8"
               ctrlrange="-0.55 0.55" forcerange="-5 5" forcelimited="true"/>

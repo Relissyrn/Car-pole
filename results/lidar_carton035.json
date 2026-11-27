@@ -1,0 +1,3933 @@
+{
+  "variant": "nominal",
+  "settings": {
+    "latency_steps": 0,
+    "action_noise_std": 0.0,
+    "box_mass_scale": 1.0,
+    "friction_scale": 1.0,
+    "box_floor_friction": 0.35,
+    "lidar_num_rays": 32,
+    "lidar_max_range": 4.0,
+    "lidar_noise_std": 0.01,
+    "stage": "randomized",
+    "target": [
+      3.0,
+      0.0
+    ],
+    "success_radius": 0.45,
+    "success_hold_steps": 5,
+    "max_steps": 700,
+    "frame_skip": 5
+  },
+  "tuning_effort": {
+    "runs_per_variant": 5,
+    "timesteps_per_run": 1500000,
+    "must_match_for_all_variants": true
+  },
+  "evaluation": {
+    "start_count": 20,
+    "identical_fixed_starts_for_every_seed_and_variant": true,
+    "deterministic_policy": true,
+    "seed_count": 5
+  },
+  "summary_across_seeds": {
+    "success_rate": {
+      "mean": 0.1,
+      "std": 0.0
+    },
+    "mean_episode_return": {
+      "mean": -35.98294343738818,
+      "std": 1.407982602960038
+    },
+    "mean_success_time_s": {
+      "mean": 0.6020000000000005,
+      "std": 0.005700877125495695
+    }
+  },
+  "per_seed": [
+    {
+      "seed": 0,
+      "model": "models\\box_push_lidar_carton035_seed_0.zip",
+      "success_rate": 0.1,
+      "mean_success_time_s": 0.6050000000000004,
+      "mean_episode_return": -36.02577209702049
+    },
+    {
+      "seed": 1,
+      "model": "models\\box_push_lidar_carton035_seed_1.zip",
+      "success_rate": 0.1,
+      "mean_success_time_s": 0.6100000000000004,
+      "mean_episode_return": -36.681690190398605
+    },
+    {
+      "seed": 2,
+      "model": "models\\box_push_lidar_carton035_seed_2.zip",
+      "success_rate": 0.1,
+      "mean_success_time_s": 0.6000000000000004,
+      "mean_episode_return": -35.52422681075862
+    },
+    {
+      "seed": 3,
+      "model": "models\\box_push_lidar_carton035_seed_3.zip",
+      "success_rate": 0.1,
+      "mean_success_time_s": 0.5950000000000004,
+      "mean_episode_return": -33.94557717411597
+    },
+    {
+      "seed": 4,
+      "model": "models\\box_push_lidar_carton035_seed_4.zip",
+      "success_rate": 0.1,
+      "mean_success_time_s": 0.6000000000000004,
+      "mean_episode_return": -37.7374509146472
+    }
+  ],
+  "failures": [
+    {
+      "seed": 0,
+      "model": "models\\box_push_lidar_carton035_seed_0.zip",
+      "start_id": 0,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.6,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -8.696162216709139,
+      "box_target_distance": 1.5999999999851575,
+      "box_x": 1.4000000000148425,
+      "box_y": 1.6468157663574894e-10
+    },
+    {
+      "seed": 0,
+      "model": "models\\box_push_lidar_carton035_seed_0.zip",
+      "start_id": 1,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.3,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -188.01447450214758,
+      "box_target_distance": 8.772539102433154,
+      "box_x": 10.055746038696029,
+      "box_y": 5.212858154711672
+    },
+    {
+      "seed": 0,
+      "model": "models\\box_push_lidar_carton035_seed_0.zip",
+      "start_id": 2,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.0,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -80.96228061647722,
+      "box_target_distance": 3.8923445610298675,
+      "box_x": 6.16288491082606,
+      "box_y": -2.2685910214597116
+    },
+    {
+      "seed": 0,
+      "model": "models\\box_push_lidar_carton035_seed_0.zip",
+      "start_id": 3,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.3,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -7.792412242634627,
+      "box_target_distance": 1.1128111970148085,
+      "box_x": 2.2354811113987103,
+      "box_y": -0.8086158724470969
+    },
+    {
+      "seed": 0,
+      "model": "models\\box_push_lidar_carton035_seed_0.zip",
+      "start_id": 4,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.6,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -7.711058853626969,
+      "box_target_distance": 1.155343625353782,
+      "box_x": 2.3437613728020166,
+      "box_y": -0.950878413267925
+    },
+    {
+      "seed": 0,
+      "model": "models\\box_push_lidar_carton035_seed_0.zip",
+      "start_id": 5,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.6,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -8.32340932194872,
+      "box_target_distance": 1.5999999999849268,
+      "box_x": 1.4000000000150732,
+      "box_y": 1.655493920778941e-10
+    },
+    {
+      "seed": 0,
+      "model": "models\\box_push_lidar_carton035_seed_0.zip",
+      "start_id": 7,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.0,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -27.752866083884253,
+      "box_target_distance": 1.882434180909779,
+      "box_x": 3.6164216620368155,
+      "box_y": -1.778646333600146
+    },
+    {
+      "seed": 0,
+      "model": "models\\box_push_lidar_carton035_seed_0.zip",
+      "start_id": 8,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.3,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -7.991173442105539,
+      "box_target_distance": 1.113957666403135,
+      "box_x": 2.4329183154154927,
+      "box_y": -0.9588117883855598
+    },
+    {
+      "seed": 0,
+      "model": "models\\box_push_lidar_carton035_seed_0.zip",
+      "start_id": 9,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.6,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -7.500033888790473,
+      "box_target_distance": 1.1913983047355277,
+      "box_x": 2.1725339165155857,
+      "box_y": -0.8571638123542394
+    },
+    {
+      "seed": 0,
+      "model": "models\\box_push_lidar_carton035_seed_0.zip",
+      "start_id": 10,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.6,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -8.155284573844671,
+      "box_target_distance": 1.5444003290193609,
+      "box_x": 1.4568275603658258,
+      "box_y": 0.06157270360006385
+    },
+    {
+      "seed": 0,
+      "model": "models\\box_push_lidar_carton035_seed_0.zip",
+      "start_id": 11,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.3,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -9.06064296206114,
+      "box_target_distance": 1.652996396134401,
+      "box_x": 3.210715677590486,
+      "box_y": 1.6395108992778609
+    },
+    {
+      "seed": 0,
+      "model": "models\\box_push_lidar_carton035_seed_0.zip",
+      "start_id": 12,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.0,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -24.84756176235078,
+      "box_target_distance": 0.8588834205944456,
+      "box_x": 2.6913194088332677,
+      "box_y": 0.8014967391131245
+    },
+    {
+      "seed": 0,
+      "model": "models\\box_push_lidar_carton035_seed_0.zip",
+      "start_id": 14,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.6,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -9.120110704438622,
+      "box_target_distance": 1.5999999999855727,
+      "box_x": 1.4000000000144273,
+      "box_y": 1.6409532624566066e-10
+    },
+    {
+      "seed": 0,
+      "model": "models\\box_push_lidar_carton035_seed_0.zip",
+      "start_id": 15,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.6,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -8.131270588065059,
+      "box_target_distance": 1.2376433445419797,
+      "box_x": 1.9297699184878025,
+      "box_y": 0.6215855700669481
+    },
+    {
+      "seed": 0,
+      "model": "models\\box_push_lidar_carton035_seed_0.zip",
+      "start_id": 16,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.3,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -7.867743817220774,
+      "box_target_distance": 1.1438473041687256,
+      "box_x": 2.2795440761483987,
+      "box_y": 0.8884424106497826
+    },
+    {
+      "seed": 0,
+      "model": "models\\box_push_lidar_carton035_seed_0.zip",
+      "start_id": 17,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.0,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -85.74614185716734,
+      "box_target_distance": 3.357867524572721,
+      "box_x": 5.52470132091292,
+      "box_y": 2.2138558111947337
+    },
+    {
+      "seed": 0,
+      "model": "models\\box_push_lidar_carton035_seed_0.zip",
+      "start_id": 18,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.3,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -173.42857631850654,
+      "box_target_distance": 8.72947735541268,
+      "box_x": 10.131882406714052,
+      "box_y": -5.033887984000572
+    },
+    {
+      "seed": 0,
+      "model": "models\\box_push_lidar_carton035_seed_0.zip",
+      "start_id": 19,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.6,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -8.46857527500627,
+      "box_target_distance": 1.5999999999856085,
+      "box_x": 1.4000000000143915,
+      "box_y": 1.6476805186587494e-10
+    },
+    {
+      "seed": 1,
+      "model": "models\\box_push_lidar_carton035_seed_1.zip",
+      "start_id": 0,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.6,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -7.491614330904327,
+      "box_target_distance": 1.5999999999848717,
+      "box_x": 1.4000000000151283,
+      "box_y": 1.6510838365015653e-10
+    },
+    {
+      "seed": 1,
+      "model": "models\\box_push_lidar_carton035_seed_1.zip",
+      "start_id": 1,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.3,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -215.3149006936496,
+      "box_target_distance": 8.860476108312186,
+      "box_x": 10.090208370839555,
+      "box_y": 5.313848146498708
+    },
+    {
+      "seed": 1,
+      "model": "models\\box_push_lidar_carton035_seed_1.zip",
+      "start_id": 2,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.0,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -65.98136644471815,
+      "box_target_distance": 2.278886102561221,
+      "box_x": 4.679220759177878,
+      "box_y": -1.5406295824735885
+    },
+    {
+      "seed": 1,
+      "model": "models\\box_push_lidar_carton035_seed_1.zip",
+      "start_id": 3,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.3,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -8.784522840341161,
+      "box_target_distance": 1.2049578145580853,
+      "box_x": 2.7072408737229594,
+      "box_y": -1.1688521843441542
+    },
+    {
+      "seed": 1,
+      "model": "models\\box_push_lidar_carton035_seed_1.zip",
+      "start_id": 4,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.6,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -7.55265715512232,
+      "box_target_distance": 1.4476797487592847,
+      "box_x": 1.5634722778721284,
+      "box_y": -0.17934536103800924
+    },
+    {
+      "seed": 1,
+      "model": "models\\box_push_lidar_carton035_seed_1.zip",
+      "start_id": 5,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.6,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -7.3471071587123,
+      "box_target_distance": 1.5999999999838397,
+      "box_x": 1.4000000000161603,
+      "box_y": 1.635676009943542e-10
+    },
+    {
+      "seed": 1,
+      "model": "models\\box_push_lidar_carton035_seed_1.zip",
+      "start_id": 7,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.0,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -23.630401776804938,
+      "box_target_distance": 0.8180941204787474,
+      "box_x": 2.326577844080014,
+      "box_y": -0.46452189386289744
+    },
+    {
+      "seed": 1,
+      "model": "models\\box_push_lidar_carton035_seed_1.zip",
+      "start_id": 8,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.3,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -8.27584251837211,
+      "box_target_distance": 0.9474166144034912,
+      "box_x": 2.3603308163480237,
+      "box_y": -0.6988716453926198
+    },
+    {
+      "seed": 1,
+      "model": "models\\box_push_lidar_carton035_seed_1.zip",
+      "start_id": 9,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.6,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -7.194340460687073,
+      "box_target_distance": 1.5999999999855061,
+      "box_x": 1.4000000000144939,
+      "box_y": 1.6470671758385794e-10
+    },
+    {
+      "seed": 1,
+      "model": "models\\box_push_lidar_carton035_seed_1.zip",
+      "start_id": 10,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.6,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -7.4732551292434275,
+      "box_target_distance": 1.5604725814494251,
+      "box_x": 1.4402307915883839,
+      "box_y": 0.046847560730875114
+    },
+    {
+      "seed": 1,
+      "model": "models\\box_push_lidar_carton035_seed_1.zip",
+      "start_id": 11,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.3,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -7.820825096156895,
+      "box_target_distance": 1.04404739604983,
+      "box_x": 2.094794547636573,
+      "box_y": 0.5202288479217138
+    },
+    {
+      "seed": 1,
+      "model": "models\\box_push_lidar_carton035_seed_1.zip",
+      "start_id": 12,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.0,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -30.868813121872225,
+      "box_target_distance": 0.888160214955305,
+      "box_x": 2.8402429088925634,
+      "box_y": 0.8736739891231418
+    },
+    {
+      "seed": 1,
+      "model": "models\\box_push_lidar_carton035_seed_1.zip",
+      "start_id": 14,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.6,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -7.328439291269488,
+      "box_target_distance": 1.5999999999849053,
+      "box_x": 1.4000000000150947,
+      "box_y": 1.651821311192495e-10
+    },
+    {
+      "seed": 1,
+      "model": "models\\box_push_lidar_carton035_seed_1.zip",
+      "start_id": 15,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.6,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -7.771142189262507,
+      "box_target_distance": 1.4378997450474593,
+      "box_x": 1.5792547675107953,
+      "box_y": 0.22144674566754075
+    },
+    {
+      "seed": 1,
+      "model": "models\\box_push_lidar_carton035_seed_1.zip",
+      "start_id": 16,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.3,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -8.019107557968873,
+      "box_target_distance": 1.0258609742280678,
+      "box_x": 2.3184986067969624,
+      "box_y": 0.7667767533685922
+    },
+    {
+      "seed": 1,
+      "model": "models\\box_push_lidar_carton035_seed_1.zip",
+      "start_id": 17,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.0,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -64.1795735011117,
+      "box_target_distance": 2.156859865271692,
+      "box_x": 4.661476176000426,
+      "box_y": 1.3753331941761684
+    },
+    {
+      "seed": 1,
+      "model": "models\\box_push_lidar_carton035_seed_1.zip",
+      "start_id": 18,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.3,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -199.8052993917935,
+      "box_target_distance": 8.904569477732583,
+      "box_x": 10.191706080990954,
+      "box_y": -5.250782915756893
+    },
+    {
+      "seed": 1,
+      "model": "models\\box_push_lidar_carton035_seed_1.zip",
+      "start_id": 19,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.6,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -7.312840229897398,
+      "box_target_distance": 1.599999999985224,
+      "box_x": 1.400000000014776,
+      "box_y": 1.6266658474344487e-10
+    },
+    {
+      "seed": 2,
+      "model": "models\\box_push_lidar_carton035_seed_2.zip",
+      "start_id": 0,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.6,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -8.248378925850549,
+      "box_target_distance": 1.5999999999874857,
+      "box_x": 1.4000000000125143,
+      "box_y": 1.6557779118766798e-10
+    },
+    {
+      "seed": 2,
+      "model": "models\\box_push_lidar_carton035_seed_2.zip",
+      "start_id": 1,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.3,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -170.67989869797148,
+      "box_target_distance": 8.766789836523397,
+      "box_x": 9.91710413829339,
+      "box_y": 5.386118674683506
+    },
+    {
+      "seed": 2,
+      "model": "models\\box_push_lidar_carton035_seed_2.zip",
+      "start_id": 2,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.0,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -64.88975522331556,
+      "box_target_distance": 2.1536618978150064,
+      "box_x": 4.656201570294343,
+      "box_y": -1.3766829441286357
+    },
+    {
+      "seed": 2,
+      "model": "models\\box_push_lidar_carton035_seed_2.zip",
+      "start_id": 3,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.3,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -8.371111068376576,
+      "box_target_distance": 1.0247336019107176,
+      "box_x": 2.0354217293729597,
+      "box_y": -0.3459302165452757
+    },
+    {
+      "seed": 2,
+      "model": "models\\box_push_lidar_carton035_seed_2.zip",
+      "start_id": 4,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.6,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -8.10378462869957,
+      "box_target_distance": 1.5999999999850079,
+      "box_x": 1.4000000000149921,
+      "box_y": 1.6550096548617647e-10
+    },
+    {
+      "seed": 2,
+      "model": "models\\box_push_lidar_carton035_seed_2.zip",
+      "start_id": 5,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.6,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -8.295124557795097,
+      "box_target_distance": 1.5744434292066491,
+      "box_x": 1.4258320341160908,
+      "box_y": 0.029450415224721707
+    },
+    {
+      "seed": 2,
+      "model": "models\\box_push_lidar_carton035_seed_2.zip",
+      "start_id": 7,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.0,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -25.363045954783008,
+      "box_target_distance": 0.8107426607646646,
+      "box_x": 2.3293290349381683,
+      "box_y": -0.4555261996930575
+    },
+    {
+      "seed": 2,
+      "model": "models\\box_push_lidar_carton035_seed_2.zip",
+      "start_id": 8,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.3,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -8.527727696107695,
+      "box_target_distance": 1.1114416609511684,
+      "box_x": 1.9072813143163656,
+      "box_y": -0.20314635033817927
+    },
+    {
+      "seed": 2,
+      "model": "models\\box_push_lidar_carton035_seed_2.zip",
+      "start_id": 9,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.6,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -8.094450652085982,
+      "box_target_distance": 1.5999999999850056,
+      "box_x": 1.4000000000149944,
+      "box_y": 1.644394745251703e-10
+    },
+    {
+      "seed": 2,
+      "model": "models\\box_push_lidar_carton035_seed_2.zip",
+      "start_id": 10,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.6,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -8.509245773070825,
+      "box_target_distance": 1.505991387252571,
+      "box_x": 1.50121253514226,
+      "box_y": 0.1471264546715928
+    },
+    {
+      "seed": 2,
+      "model": "models\\box_push_lidar_carton035_seed_2.zip",
+      "start_id": 11,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.3,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -10.241969900618118,
+      "box_target_distance": 1.4056514670035243,
+      "box_x": 3.1520022908237944,
+      "box_y": 1.39740879855305
+    },
+    {
+      "seed": 2,
+      "model": "models\\box_push_lidar_carton035_seed_2.zip",
+      "start_id": 12,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.0,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -64.86332115853993,
+      "box_target_distance": 2.4996104925926836,
+      "box_x": 4.301167025792139,
+      "box_y": 2.1342485763543757
+    },
+    {
+      "seed": 2,
+      "model": "models\\box_push_lidar_carton035_seed_2.zip",
+      "start_id": 14,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.6,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -8.0949615470272,
+      "box_target_distance": 1.5999999999855457,
+      "box_x": 1.4000000000144543,
+      "box_y": 1.6430594238014168e-10
+    },
+    {
+      "seed": 2,
+      "model": "models\\box_push_lidar_carton035_seed_2.zip",
+      "start_id": 15,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.6,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -8.484123672158397,
+      "box_target_distance": 1.2911241723687485,
+      "box_x": 1.8147520687613776,
+      "box_y": 0.5120439141025425
+    },
+    {
+      "seed": 2,
+      "model": "models\\box_push_lidar_carton035_seed_2.zip",
+      "start_id": 16,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.3,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -8.205883616853747,
+      "box_target_distance": 1.2397469275737345,
+      "box_x": 2.593673471584068,
+      "box_y": 1.1712690539470303
+    },
+    {
+      "seed": 2,
+      "model": "models\\box_push_lidar_carton035_seed_2.zip",
+      "start_id": 17,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.0,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -66.53055998624075,
+      "box_target_distance": 2.284740504057969,
+      "box_x": 4.866331597210961,
+      "box_y": 1.3178943584882077
+    },
+    {
+      "seed": 2,
+      "model": "models\\box_push_lidar_carton035_seed_2.zip",
+      "start_id": 18,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.3,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -177.04894875703994,
+      "box_target_distance": 8.518831273171159,
+      "box_x": 9.74104176363823,
+      "box_y": -5.208535514100305
+    },
+    {
+      "seed": 2,
+      "model": "models\\box_push_lidar_carton035_seed_2.zip",
+      "start_id": 19,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.6,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -8.118643435114256,
+      "box_target_distance": 1.5999999999850854,
+      "box_x": 1.4000000000149146,
+      "box_y": 1.6517664306517806e-10
+    },
+    {
+      "seed": 3,
+      "model": "models\\box_push_lidar_carton035_seed_3.zip",
+      "start_id": 0,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.6,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -7.582261008141292,
+      "box_target_distance": 1.5999999999853678,
+      "box_x": 1.4000000000146322,
+      "box_y": 1.656540923389776e-10
+    },
+    {
+      "seed": 3,
+      "model": "models\\box_push_lidar_carton035_seed_3.zip",
+      "start_id": 1,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.3,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -170.46474499737468,
+      "box_target_distance": 8.473868657586175,
+      "box_x": 9.81128895568022,
+      "box_y": 5.041110273367365
+    },
+    {
+      "seed": 3,
+      "model": "models\\box_push_lidar_carton035_seed_3.zip",
+      "start_id": 2,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.0,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -66.11197302861983,
+      "box_target_distance": 2.2651518544942735,
+      "box_x": 4.828456791828033,
+      "box_y": -1.337033538972297
+    },
+    {
+      "seed": 3,
+      "model": "models\\box_push_lidar_carton035_seed_3.zip",
+      "start_id": 3,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.3,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -7.332887822456466,
+      "box_target_distance": 1.515043873038271,
+      "box_x": 1.4856406143638086,
+      "box_y": -0.045536670567593994
+    },
+    {
+      "seed": 3,
+      "model": "models\\box_push_lidar_carton035_seed_3.zip",
+      "start_id": 4,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.6,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -7.902544092377335,
+      "box_target_distance": 1.5179160546293535,
+      "box_x": 1.4849421613052136,
+      "box_y": -0.09310689722584867
+    },
+    {
+      "seed": 3,
+      "model": "models\\box_push_lidar_carton035_seed_3.zip",
+      "start_id": 5,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.6,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -7.7944303574711125,
+      "box_target_distance": 1.583244216744748,
+      "box_x": 1.416981874445116,
+      "box_y": 0.026755635301589007
+    },
+    {
+      "seed": 3,
+      "model": "models\\box_push_lidar_carton035_seed_3.zip",
+      "start_id": 7,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.0,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -24.78345494844776,
+      "box_target_distance": 0.8158220678041761,
+      "box_x": 2.3243191344907808,
+      "box_y": -0.45718816071831325
+    },
+    {
+      "seed": 3,
+      "model": "models\\box_push_lidar_carton035_seed_3.zip",
+      "start_id": 8,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.3,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -8.206548306432286,
+      "box_target_distance": 0.9083949611579888,
+      "box_x": 2.427170147446228,
+      "box_y": -0.7050158618644319
+    },
+    {
+      "seed": 3,
+      "model": "models\\box_push_lidar_carton035_seed_3.zip",
+      "start_id": 9,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.6,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -7.940231723289137,
+      "box_target_distance": 1.5999999999852361,
+      "box_x": 1.4000000000147639,
+      "box_y": 1.6472080372400772e-10
+    },
+    {
+      "seed": 3,
+      "model": "models\\box_push_lidar_carton035_seed_3.zip",
+      "start_id": 10,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.6,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -8.056901353112488,
+      "box_target_distance": 1.4583765308847416,
+      "box_x": 1.5596896507215292,
+      "box_y": 0.22884100068987542
+    },
+    {
+      "seed": 3,
+      "model": "models\\box_push_lidar_carton035_seed_3.zip",
+      "start_id": 11,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.3,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -7.513919134220619,
+      "box_target_distance": 0.9604442985595893,
+      "box_x": 2.2648879227778345,
+      "box_y": 0.6181128412820224
+    },
+    {
+      "seed": 3,
+      "model": "models\\box_push_lidar_carton035_seed_3.zip",
+      "start_id": 12,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.0,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -23.992735204204944,
+      "box_target_distance": 0.7825133496529919,
+      "box_x": 2.4126036944632108,
+      "box_y": 0.5170036002068811
+    },
+    {
+      "seed": 3,
+      "model": "models\\box_push_lidar_carton035_seed_3.zip",
+      "start_id": 14,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.6,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -7.898509107454502,
+      "box_target_distance": 1.5999999999833712,
+      "box_x": 1.4000000000166288,
+      "box_y": 1.6548081202092254e-10
+    },
+    {
+      "seed": 3,
+      "model": "models\\box_push_lidar_carton035_seed_3.zip",
+      "start_id": 15,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.6,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -7.917503085138121,
+      "box_target_distance": 1.4989594241031707,
+      "box_x": 1.5104909163064284,
+      "box_y": 0.16805369588927827
+    },
+    {
+      "seed": 3,
+      "model": "models\\box_push_lidar_carton035_seed_3.zip",
+      "start_id": 16,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.3,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -7.32343812376504,
+      "box_target_distance": 1.515124696223687,
+      "box_x": 1.4855834137983233,
+      "box_y": 0.04631682787259154
+    },
+    {
+      "seed": 3,
+      "model": "models\\box_push_lidar_carton035_seed_3.zip",
+      "start_id": 17,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.0,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -64.1886714931026,
+      "box_target_distance": 2.1730463963236604,
+      "box_x": 4.636665190097203,
+      "box_y": 1.42949560898218
+    },
+    {
+      "seed": 3,
+      "model": "models\\box_push_lidar_carton035_seed_3.zip",
+      "start_id": 18,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.3,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -196.12560498189833,
+      "box_target_distance": 8.394399713982057,
+      "box_x": 10.002516975387415,
+      "box_y": -4.629330682454334
+    },
+    {
+      "seed": 3,
+      "model": "models\\box_push_lidar_carton035_seed_3.zip",
+      "start_id": 19,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.6,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -7.964981284878058,
+      "box_target_distance": 1.5999999999845176,
+      "box_x": 1.4000000000154824,
+      "box_y": 1.6547149878931288e-10
+    },
+    {
+      "seed": 4,
+      "model": "models\\box_push_lidar_carton035_seed_4.zip",
+      "start_id": 0,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.6,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -7.61508259287044,
+      "box_target_distance": 1.599999999986299,
+      "box_x": 1.400000000013701,
+      "box_y": 1.656251982329395e-10
+    },
+    {
+      "seed": 4,
+      "model": "models\\box_push_lidar_carton035_seed_4.zip",
+      "start_id": 1,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.3,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -213.02317537128715,
+      "box_target_distance": 8.376032633874914,
+      "box_x": 9.609728468858425,
+      "box_y": 5.144843267943154
+    },
+    {
+      "seed": 4,
+      "model": "models\\box_push_lidar_carton035_seed_4.zip",
+      "start_id": 2,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.0,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -66.91994823018925,
+      "box_target_distance": 2.262817823064975,
+      "box_x": 4.723998487321848,
+      "box_y": -1.4656649399137898
+    },
+    {
+      "seed": 4,
+      "model": "models\\box_push_lidar_carton035_seed_4.zip",
+      "start_id": 3,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.3,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -22.88218521824719,
+      "box_target_distance": 1.956947140510174,
+      "box_x": 2.792882792107828,
+      "box_y": -1.9459559534958384
+    },
+    {
+      "seed": 4,
+      "model": "models\\box_push_lidar_carton035_seed_4.zip",
+      "start_id": 4,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.6,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -8.196190294399004,
+      "box_target_distance": 1.3998677136511306,
+      "box_x": 2.1852548827954363,
+      "box_y": -1.1383409022406976
+    },
+    {
+      "seed": 4,
+      "model": "models\\box_push_lidar_carton035_seed_4.zip",
+      "start_id": 5,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.6,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -7.5088379814339525,
+      "box_target_distance": 1.5999999999854275,
+      "box_x": 1.4000000000145725,
+      "box_y": 1.6384096179359163e-10
+    },
+    {
+      "seed": 4,
+      "model": "models\\box_push_lidar_carton035_seed_4.zip",
+      "start_id": 7,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.0,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -24.186993507515705,
+      "box_target_distance": 0.7455678757340404,
+      "box_x": 2.587848314018432,
+      "box_y": -0.6212909504162444
+    },
+    {
+      "seed": 4,
+      "model": "models\\box_push_lidar_carton035_seed_4.zip",
+      "start_id": 8,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.3,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -8.870684974972189,
+      "box_target_distance": 1.4651515984541787,
+      "box_x": 2.981582383998608,
+      "box_y": -1.4650358350134853
+    },
+    {
+      "seed": 4,
+      "model": "models\\box_push_lidar_carton035_seed_4.zip",
+      "start_id": 9,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.6,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -7.672308040583092,
+      "box_target_distance": 1.0199142170967748,
+      "box_x": 2.0388854027587118,
+      "box_y": -0.3412971450303143
+    },
+    {
+      "seed": 4,
+      "model": "models\\box_push_lidar_carton035_seed_4.zip",
+      "start_id": 10,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.6,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -7.4211166171024745,
+      "box_target_distance": 1.5999999999846937,
+      "box_x": 1.4000000000153063,
+      "box_y": 1.643744353909109e-10
+    },
+    {
+      "seed": 4,
+      "model": "models\\box_push_lidar_carton035_seed_4.zip",
+      "start_id": 11,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.3,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -7.745763699736349,
+      "box_target_distance": 1.138460216537985,
+      "box_x": 1.8855179534698547,
+      "box_y": 0.23242511181388031
+    },
+    {
+      "seed": 4,
+      "model": "models\\box_push_lidar_carton035_seed_4.zip",
+      "start_id": 12,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.0,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -24.3354436137148,
+      "box_target_distance": 0.8270070597868151,
+      "box_x": 2.321723669132334,
+      "box_y": 0.47316159599224583
+    },
+    {
+      "seed": 4,
+      "model": "models\\box_push_lidar_carton035_seed_4.zip",
+      "start_id": 14,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.6,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -36.735512312855086,
+      "box_target_distance": 1.3286126724217704,
+      "box_x": 2.6407726850888436,
+      "box_y": -1.2791275814168965
+    },
+    {
+      "seed": 4,
+      "model": "models\\box_push_lidar_carton035_seed_4.zip",
+      "start_id": 15,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.6,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -7.229157533570257,
+      "box_target_distance": 1.5777241003870406,
+      "box_x": 1.422537098873965,
+      "box_y": 0.028707708252827112
+    },
+    {
+      "seed": 4,
+      "model": "models\\box_push_lidar_carton035_seed_4.zip",
+      "start_id": 16,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.3,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -7.679717111881557,
+      "box_target_distance": 0.9904484713853712,
+      "box_x": 2.1216199727617053,
+      "box_y": 0.45764254852283026
+    },
+    {
+      "seed": 4,
+      "model": "models\\box_push_lidar_carton035_seed_4.zip",
+      "start_id": 17,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.0,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -66.69864833526526,
+      "box_target_distance": 2.2859307468054184,
+      "box_x": 4.877193306119508,
+      "box_y": 1.3044633650089565
+    },
+    {
+      "seed": 4,
+      "model": "models\\box_push_lidar_carton035_seed_4.zip",
+      "start_id": 18,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.3,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -182.61092174520783,
+      "box_target_distance": 8.486798704499828,
+      "box_x": 9.883282835592965,
+      "box_y": -4.9644908758029995
+    },
+    {
+      "seed": 4,
+      "model": "models\\box_push_lidar_carton035_seed_4.zip",
+      "start_id": 19,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.6,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -7.523887182709026,
+      "box_target_distance": 1.225090621379581,
+      "box_x": 1.7750377506866315,
+      "box_y": -0.01773466518828473
+    }
+  ],
+  "episode_results": [
+    {
+      "seed": 0,
+      "model": "models\\box_push_lidar_carton035_seed_0.zip",
+      "start_id": 0,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.6,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -8.696162216709139,
+      "box_target_distance": 1.5999999999851575,
+      "box_x": 1.4000000000148425,
+      "box_y": 1.6468157663574894e-10
+    },
+    {
+      "seed": 0,
+      "model": "models\\box_push_lidar_carton035_seed_0.zip",
+      "start_id": 1,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.3,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -188.01447450214758,
+      "box_target_distance": 8.772539102433154,
+      "box_x": 10.055746038696029,
+      "box_y": 5.212858154711672
+    },
+    {
+      "seed": 0,
+      "model": "models\\box_push_lidar_carton035_seed_0.zip",
+      "start_id": 2,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.0,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -80.96228061647722,
+      "box_target_distance": 3.8923445610298675,
+      "box_x": 6.16288491082606,
+      "box_y": -2.2685910214597116
+    },
+    {
+      "seed": 0,
+      "model": "models\\box_push_lidar_carton035_seed_0.zip",
+      "start_id": 3,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.3,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -7.792412242634627,
+      "box_target_distance": 1.1128111970148085,
+      "box_x": 2.2354811113987103,
+      "box_y": -0.8086158724470969
+    },
+    {
+      "seed": 0,
+      "model": "models\\box_push_lidar_carton035_seed_0.zip",
+      "start_id": 4,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.6,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -7.711058853626969,
+      "box_target_distance": 1.155343625353782,
+      "box_x": 2.3437613728020166,
+      "box_y": -0.950878413267925
+    },
+    {
+      "seed": 0,
+      "model": "models\\box_push_lidar_carton035_seed_0.zip",
+      "start_id": 5,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.6,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -8.32340932194872,
+      "box_target_distance": 1.5999999999849268,
+      "box_x": 1.4000000000150732,
+      "box_y": 1.655493920778941e-10
+    },
+    {
+      "seed": 0,
+      "model": "models\\box_push_lidar_carton035_seed_0.zip",
+      "start_id": 6,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.3,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": true,
+      "reason": "success",
+      "time_s": 0.6000000000000004,
+      "episode_return": -20.238300389546446,
+      "box_target_distance": 0.33378257324182375,
+      "box_x": 2.7933723989222163,
+      "box_y": 0.2621370646680353
+    },
+    {
+      "seed": 0,
+      "model": "models\\box_push_lidar_carton035_seed_0.zip",
+      "start_id": 7,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.0,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -27.752866083884253,
+      "box_target_distance": 1.882434180909779,
+      "box_x": 3.6164216620368155,
+      "box_y": -1.778646333600146
+    },
+    {
+      "seed": 0,
+      "model": "models\\box_push_lidar_carton035_seed_0.zip",
+      "start_id": 8,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.3,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -7.991173442105539,
+      "box_target_distance": 1.113957666403135,
+      "box_x": 2.4329183154154927,
+      "box_y": -0.9588117883855598
+    },
+    {
+      "seed": 0,
+      "model": "models\\box_push_lidar_carton035_seed_0.zip",
+      "start_id": 9,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.6,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -7.500033888790473,
+      "box_target_distance": 1.1913983047355277,
+      "box_x": 2.1725339165155857,
+      "box_y": -0.8571638123542394
+    },
+    {
+      "seed": 0,
+      "model": "models\\box_push_lidar_carton035_seed_0.zip",
+      "start_id": 10,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.6,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -8.155284573844671,
+      "box_target_distance": 1.5444003290193609,
+      "box_x": 1.4568275603658258,
+      "box_y": 0.06157270360006385
+    },
+    {
+      "seed": 0,
+      "model": "models\\box_push_lidar_carton035_seed_0.zip",
+      "start_id": 11,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.3,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -9.06064296206114,
+      "box_target_distance": 1.652996396134401,
+      "box_x": 3.210715677590486,
+      "box_y": 1.6395108992778609
+    },
+    {
+      "seed": 0,
+      "model": "models\\box_push_lidar_carton035_seed_0.zip",
+      "start_id": 12,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.0,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -24.84756176235078,
+      "box_target_distance": 0.8588834205944456,
+      "box_x": 2.6913194088332677,
+      "box_y": 0.8014967391131245
+    },
+    {
+      "seed": 0,
+      "model": "models\\box_push_lidar_carton035_seed_0.zip",
+      "start_id": 13,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.3,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": true,
+      "reason": "success",
+      "time_s": 0.6100000000000004,
+      "episode_return": -20.7073625238776,
+      "box_target_distance": 0.330925396539099,
+      "box_x": 2.802280443479342,
+      "box_y": -0.2653650222690138
+    },
+    {
+      "seed": 0,
+      "model": "models\\box_push_lidar_carton035_seed_0.zip",
+      "start_id": 14,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.6,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -9.120110704438622,
+      "box_target_distance": 1.5999999999855727,
+      "box_x": 1.4000000000144273,
+      "box_y": 1.6409532624566066e-10
+    },
+    {
+      "seed": 0,
+      "model": "models\\box_push_lidar_carton035_seed_0.zip",
+      "start_id": 15,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.6,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -8.131270588065059,
+      "box_target_distance": 1.2376433445419797,
+      "box_x": 1.9297699184878025,
+      "box_y": 0.6215855700669481
+    },
+    {
+      "seed": 0,
+      "model": "models\\box_push_lidar_carton035_seed_0.zip",
+      "start_id": 16,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.3,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -7.867743817220774,
+      "box_target_distance": 1.1438473041687256,
+      "box_x": 2.2795440761483987,
+      "box_y": 0.8884424106497826
+    },
+    {
+      "seed": 0,
+      "model": "models\\box_push_lidar_carton035_seed_0.zip",
+      "start_id": 17,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.0,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -85.74614185716734,
+      "box_target_distance": 3.357867524572721,
+      "box_x": 5.52470132091292,
+      "box_y": 2.2138558111947337
+    },
+    {
+      "seed": 0,
+      "model": "models\\box_push_lidar_carton035_seed_0.zip",
+      "start_id": 18,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.3,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -173.42857631850654,
+      "box_target_distance": 8.72947735541268,
+      "box_x": 10.131882406714052,
+      "box_y": -5.033887984000572
+    },
+    {
+      "seed": 0,
+      "model": "models\\box_push_lidar_carton035_seed_0.zip",
+      "start_id": 19,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.6,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -8.46857527500627,
+      "box_target_distance": 1.5999999999856085,
+      "box_x": 1.4000000000143915,
+      "box_y": 1.6476805186587494e-10
+    },
+    {
+      "seed": 1,
+      "model": "models\\box_push_lidar_carton035_seed_1.zip",
+      "start_id": 0,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.6,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -7.491614330904327,
+      "box_target_distance": 1.5999999999848717,
+      "box_x": 1.4000000000151283,
+      "box_y": 1.6510838365015653e-10
+    },
+    {
+      "seed": 1,
+      "model": "models\\box_push_lidar_carton035_seed_1.zip",
+      "start_id": 1,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.3,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -215.3149006936496,
+      "box_target_distance": 8.860476108312186,
+      "box_x": 10.090208370839555,
+      "box_y": 5.313848146498708
+    },
+    {
+      "seed": 1,
+      "model": "models\\box_push_lidar_carton035_seed_1.zip",
+      "start_id": 2,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.0,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -65.98136644471815,
+      "box_target_distance": 2.278886102561221,
+      "box_x": 4.679220759177878,
+      "box_y": -1.5406295824735885
+    },
+    {
+      "seed": 1,
+      "model": "models\\box_push_lidar_carton035_seed_1.zip",
+      "start_id": 3,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.3,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -8.784522840341161,
+      "box_target_distance": 1.2049578145580853,
+      "box_x": 2.7072408737229594,
+      "box_y": -1.1688521843441542
+    },
+    {
+      "seed": 1,
+      "model": "models\\box_push_lidar_carton035_seed_1.zip",
+      "start_id": 4,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.6,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -7.55265715512232,
+      "box_target_distance": 1.4476797487592847,
+      "box_x": 1.5634722778721284,
+      "box_y": -0.17934536103800924
+    },
+    {
+      "seed": 1,
+      "model": "models\\box_push_lidar_carton035_seed_1.zip",
+      "start_id": 5,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.6,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -7.3471071587123,
+      "box_target_distance": 1.5999999999838397,
+      "box_x": 1.4000000000161603,
+      "box_y": 1.635676009943542e-10
+    },
+    {
+      "seed": 1,
+      "model": "models\\box_push_lidar_carton035_seed_1.zip",
+      "start_id": 6,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.3,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": true,
+      "reason": "success",
+      "time_s": 0.6100000000000004,
+      "episode_return": -20.840567887511767,
+      "box_target_distance": 0.32917147726909823,
+      "box_x": 2.802622542173146,
+      "box_y": 0.26343120655937646
+    },
+    {
+      "seed": 1,
+      "model": "models\\box_push_lidar_carton035_seed_1.zip",
+      "start_id": 7,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.0,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -23.630401776804938,
+      "box_target_distance": 0.8180941204787474,
+      "box_x": 2.326577844080014,
+      "box_y": -0.46452189386289744
+    },
+    {
+      "seed": 1,
+      "model": "models\\box_push_lidar_carton035_seed_1.zip",
+      "start_id": 8,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.3,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -8.27584251837211,
+      "box_target_distance": 0.9474166144034912,
+      "box_x": 2.3603308163480237,
+      "box_y": -0.6988716453926198
+    },
+    {
+      "seed": 1,
+      "model": "models\\box_push_lidar_carton035_seed_1.zip",
+      "start_id": 9,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.6,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -7.194340460687073,
+      "box_target_distance": 1.5999999999855061,
+      "box_x": 1.4000000000144939,
+      "box_y": 1.6470671758385794e-10
+    },
+    {
+      "seed": 1,
+      "model": "models\\box_push_lidar_carton035_seed_1.zip",
+      "start_id": 10,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.6,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -7.4732551292434275,
+      "box_target_distance": 1.5604725814494251,
+      "box_x": 1.4402307915883839,
+      "box_y": 0.046847560730875114
+    },
+    {
+      "seed": 1,
+      "model": "models\\box_push_lidar_carton035_seed_1.zip",
+      "start_id": 11,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.3,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -7.820825096156895,
+      "box_target_distance": 1.04404739604983,
+      "box_x": 2.094794547636573,
+      "box_y": 0.5202288479217138
+    },
+    {
+      "seed": 1,
+      "model": "models\\box_push_lidar_carton035_seed_1.zip",
+      "start_id": 12,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.0,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -30.868813121872225,
+      "box_target_distance": 0.888160214955305,
+      "box_x": 2.8402429088925634,
+      "box_y": 0.8736739891231418
+    },
+    {
+      "seed": 1,
+      "model": "models\\box_push_lidar_carton035_seed_1.zip",
+      "start_id": 13,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.3,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": true,
+      "reason": "success",
+      "time_s": 0.6100000000000004,
+      "episode_return": -20.64118703257227,
+      "box_target_distance": 0.33020205717535017,
+      "box_x": 2.801295529073888,
+      "box_y": -0.2637232105765571
+    },
+    {
+      "seed": 1,
+      "model": "models\\box_push_lidar_carton035_seed_1.zip",
+      "start_id": 14,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.6,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -7.328439291269488,
+      "box_target_distance": 1.5999999999849053,
+      "box_x": 1.4000000000150947,
+      "box_y": 1.651821311192495e-10
+    },
+    {
+      "seed": 1,
+      "model": "models\\box_push_lidar_carton035_seed_1.zip",
+      "start_id": 15,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.6,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -7.771142189262507,
+      "box_target_distance": 1.4378997450474593,
+      "box_x": 1.5792547675107953,
+      "box_y": 0.22144674566754075
+    },
+    {
+      "seed": 1,
+      "model": "models\\box_push_lidar_carton035_seed_1.zip",
+      "start_id": 16,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.3,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -8.019107557968873,
+      "box_target_distance": 1.0258609742280678,
+      "box_x": 2.3184986067969624,
+      "box_y": 0.7667767533685922
+    },
+    {
+      "seed": 1,
+      "model": "models\\box_push_lidar_carton035_seed_1.zip",
+      "start_id": 17,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.0,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -64.1795735011117,
+      "box_target_distance": 2.156859865271692,
+      "box_x": 4.661476176000426,
+      "box_y": 1.3753331941761684
+    },
+    {
+      "seed": 1,
+      "model": "models\\box_push_lidar_carton035_seed_1.zip",
+      "start_id": 18,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.3,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -199.8052993917935,
+      "box_target_distance": 8.904569477732583,
+      "box_x": 10.191706080990954,
+      "box_y": -5.250782915756893
+    },
+    {
+      "seed": 1,
+      "model": "models\\box_push_lidar_carton035_seed_1.zip",
+      "start_id": 19,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.6,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -7.312840229897398,
+      "box_target_distance": 1.599999999985224,
+      "box_x": 1.400000000014776,
+      "box_y": 1.6266658474344487e-10
+    },
+    {
+      "seed": 2,
+      "model": "models\\box_push_lidar_carton035_seed_2.zip",
+      "start_id": 0,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.6,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -8.248378925850549,
+      "box_target_distance": 1.5999999999874857,
+      "box_x": 1.4000000000125143,
+      "box_y": 1.6557779118766798e-10
+    },
+    {
+      "seed": 2,
+      "model": "models\\box_push_lidar_carton035_seed_2.zip",
+      "start_id": 1,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.3,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -170.67989869797148,
+      "box_target_distance": 8.766789836523397,
+      "box_x": 9.91710413829339,
+      "box_y": 5.386118674683506
+    },
+    {
+      "seed": 2,
+      "model": "models\\box_push_lidar_carton035_seed_2.zip",
+      "start_id": 2,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.0,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -64.88975522331556,
+      "box_target_distance": 2.1536618978150064,
+      "box_x": 4.656201570294343,
+      "box_y": -1.3766829441286357
+    },
+    {
+      "seed": 2,
+      "model": "models\\box_push_lidar_carton035_seed_2.zip",
+      "start_id": 3,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.3,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -8.371111068376576,
+      "box_target_distance": 1.0247336019107176,
+      "box_x": 2.0354217293729597,
+      "box_y": -0.3459302165452757
+    },
+    {
+      "seed": 2,
+      "model": "models\\box_push_lidar_carton035_seed_2.zip",
+      "start_id": 4,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.6,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -8.10378462869957,
+      "box_target_distance": 1.5999999999850079,
+      "box_x": 1.4000000000149921,
+      "box_y": 1.6550096548617647e-10
+    },
+    {
+      "seed": 2,
+      "model": "models\\box_push_lidar_carton035_seed_2.zip",
+      "start_id": 5,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.6,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -8.295124557795097,
+      "box_target_distance": 1.5744434292066491,
+      "box_x": 1.4258320341160908,
+      "box_y": 0.029450415224721707
+    },
+    {
+      "seed": 2,
+      "model": "models\\box_push_lidar_carton035_seed_2.zip",
+      "start_id": 6,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.3,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": true,
+      "reason": "success",
+      "time_s": 0.6000000000000004,
+      "episode_return": -19.88340225156323,
+      "box_target_distance": 0.3325586927254584,
+      "box_x": 2.791931537379396,
+      "box_y": 0.25942782998353164
+    },
+    {
+      "seed": 2,
+      "model": "models\\box_push_lidar_carton035_seed_2.zip",
+      "start_id": 7,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.0,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -25.363045954783008,
+      "box_target_distance": 0.8107426607646646,
+      "box_x": 2.3293290349381683,
+      "box_y": -0.4555261996930575
+    },
+    {
+      "seed": 2,
+      "model": "models\\box_push_lidar_carton035_seed_2.zip",
+      "start_id": 8,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.3,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -8.527727696107695,
+      "box_target_distance": 1.1114416609511684,
+      "box_x": 1.9072813143163656,
+      "box_y": -0.20314635033817927
+    },
+    {
+      "seed": 2,
+      "model": "models\\box_push_lidar_carton035_seed_2.zip",
+      "start_id": 9,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.6,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -8.094450652085982,
+      "box_target_distance": 1.5999999999850056,
+      "box_x": 1.4000000000149944,
+      "box_y": 1.644394745251703e-10
+    },
+    {
+      "seed": 2,
+      "model": "models\\box_push_lidar_carton035_seed_2.zip",
+      "start_id": 10,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.6,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -8.509245773070825,
+      "box_target_distance": 1.505991387252571,
+      "box_x": 1.50121253514226,
+      "box_y": 0.1471264546715928
+    },
+    {
+      "seed": 2,
+      "model": "models\\box_push_lidar_carton035_seed_2.zip",
+      "start_id": 11,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.3,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -10.241969900618118,
+      "box_target_distance": 1.4056514670035243,
+      "box_x": 3.1520022908237944,
+      "box_y": 1.39740879855305
+    },
+    {
+      "seed": 2,
+      "model": "models\\box_push_lidar_carton035_seed_2.zip",
+      "start_id": 12,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.0,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -64.86332115853993,
+      "box_target_distance": 2.4996104925926836,
+      "box_x": 4.301167025792139,
+      "box_y": 2.1342485763543757
+    },
+    {
+      "seed": 2,
+      "model": "models\\box_push_lidar_carton035_seed_2.zip",
+      "start_id": 13,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.3,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": true,
+      "reason": "success",
+      "time_s": 0.6000000000000004,
+      "episode_return": -19.930198711960514,
+      "box_target_distance": 0.3306810084573921,
+      "box_x": 2.793285504788794,
+      "box_y": -0.2581066578451127
+    },
+    {
+      "seed": 2,
+      "model": "models\\box_push_lidar_carton035_seed_2.zip",
+      "start_id": 14,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.6,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -8.0949615470272,
+      "box_target_distance": 1.5999999999855457,
+      "box_x": 1.4000000000144543,
+      "box_y": 1.6430594238014168e-10
+    },
+    {
+      "seed": 2,
+      "model": "models\\box_push_lidar_carton035_seed_2.zip",
+      "start_id": 15,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.6,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -8.484123672158397,
+      "box_target_distance": 1.2911241723687485,
+      "box_x": 1.8147520687613776,
+      "box_y": 0.5120439141025425
+    },
+    {
+      "seed": 2,
+      "model": "models\\box_push_lidar_carton035_seed_2.zip",
+      "start_id": 16,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.3,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -8.205883616853747,
+      "box_target_distance": 1.2397469275737345,
+      "box_x": 2.593673471584068,
+      "box_y": 1.1712690539470303
+    },
+    {
+      "seed": 2,
+      "model": "models\\box_push_lidar_carton035_seed_2.zip",
+      "start_id": 17,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.0,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -66.53055998624075,
+      "box_target_distance": 2.284740504057969,
+      "box_x": 4.866331597210961,
+      "box_y": 1.3178943584882077
+    },
+    {
+      "seed": 2,
+      "model": "models\\box_push_lidar_carton035_seed_2.zip",
+      "start_id": 18,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.3,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -177.04894875703994,
+      "box_target_distance": 8.518831273171159,
+      "box_x": 9.74104176363823,
+      "box_y": -5.208535514100305
+    },
+    {
+      "seed": 2,
+      "model": "models\\box_push_lidar_carton035_seed_2.zip",
+      "start_id": 19,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.6,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -8.118643435114256,
+      "box_target_distance": 1.5999999999850854,
+      "box_x": 1.4000000000149146,
+      "box_y": 1.6517664306517806e-10
+    },
+    {
+      "seed": 3,
+      "model": "models\\box_push_lidar_carton035_seed_3.zip",
+      "start_id": 0,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.6,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -7.582261008141292,
+      "box_target_distance": 1.5999999999853678,
+      "box_x": 1.4000000000146322,
+      "box_y": 1.656540923389776e-10
+    },
+    {
+      "seed": 3,
+      "model": "models\\box_push_lidar_carton035_seed_3.zip",
+      "start_id": 1,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.3,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -170.46474499737468,
+      "box_target_distance": 8.473868657586175,
+      "box_x": 9.81128895568022,
+      "box_y": 5.041110273367365
+    },
+    {
+      "seed": 3,
+      "model": "models\\box_push_lidar_carton035_seed_3.zip",
+      "start_id": 2,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.0,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -66.11197302861983,
+      "box_target_distance": 2.2651518544942735,
+      "box_x": 4.828456791828033,
+      "box_y": -1.337033538972297
+    },
+    {
+      "seed": 3,
+      "model": "models\\box_push_lidar_carton035_seed_3.zip",
+      "start_id": 3,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.3,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -7.332887822456466,
+      "box_target_distance": 1.515043873038271,
+      "box_x": 1.4856406143638086,
+      "box_y": -0.045536670567593994
+    },
+    {
+      "seed": 3,
+      "model": "models\\box_push_lidar_carton035_seed_3.zip",
+      "start_id": 4,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.6,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -7.902544092377335,
+      "box_target_distance": 1.5179160546293535,
+      "box_x": 1.4849421613052136,
+      "box_y": -0.09310689722584867
+    },
+    {
+      "seed": 3,
+      "model": "models\\box_push_lidar_carton035_seed_3.zip",
+      "start_id": 5,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.6,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -7.7944303574711125,
+      "box_target_distance": 1.583244216744748,
+      "box_x": 1.416981874445116,
+      "box_y": 0.026755635301589007
+    },
+    {
+      "seed": 3,
+      "model": "models\\box_push_lidar_carton035_seed_3.zip",
+      "start_id": 6,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.3,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": true,
+      "reason": "success",
+      "time_s": 0.5900000000000004,
+      "episode_return": -19.562273787288817,
+      "box_target_distance": 0.33831640187205336,
+      "box_x": 2.7767397528594624,
+      "box_y": 0.25419057776085796
+    },
+    {
+      "seed": 3,
+      "model": "models\\box_push_lidar_carton035_seed_3.zip",
+      "start_id": 7,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.0,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -24.78345494844776,
+      "box_target_distance": 0.8158220678041761,
+      "box_x": 2.3243191344907808,
+      "box_y": -0.45718816071831325
+    },
+    {
+      "seed": 3,
+      "model": "models\\box_push_lidar_carton035_seed_3.zip",
+      "start_id": 8,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.3,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -8.206548306432286,
+      "box_target_distance": 0.9083949611579888,
+      "box_x": 2.427170147446228,
+      "box_y": -0.7050158618644319
+    },
+    {
+      "seed": 3,
+      "model": "models\\box_push_lidar_carton035_seed_3.zip",
+      "start_id": 9,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.6,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -7.940231723289137,
+      "box_target_distance": 1.5999999999852361,
+      "box_x": 1.4000000000147639,
+      "box_y": 1.6472080372400772e-10
+    },
+    {
+      "seed": 3,
+      "model": "models\\box_push_lidar_carton035_seed_3.zip",
+      "start_id": 10,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.6,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -8.056901353112488,
+      "box_target_distance": 1.4583765308847416,
+      "box_x": 1.5596896507215292,
+      "box_y": 0.22884100068987542
+    },
+    {
+      "seed": 3,
+      "model": "models\\box_push_lidar_carton035_seed_3.zip",
+      "start_id": 11,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.3,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -7.513919134220619,
+      "box_target_distance": 0.9604442985595893,
+      "box_x": 2.2648879227778345,
+      "box_y": 0.6181128412820224
+    },
+    {
+      "seed": 3,
+      "model": "models\\box_push_lidar_carton035_seed_3.zip",
+      "start_id": 12,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.0,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -23.992735204204944,
+      "box_target_distance": 0.7825133496529919,
+      "box_x": 2.4126036944632108,
+      "box_y": 0.5170036002068811
+    },
+    {
+      "seed": 3,
+      "model": "models\\box_push_lidar_carton035_seed_3.zip",
+      "start_id": 13,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.3,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": true,
+      "reason": "success",
+      "time_s": 0.6000000000000004,
+      "episode_return": -20.247929642645936,
+      "box_target_distance": 0.3333983525651781,
+      "box_x": 2.791083589857171,
+      "box_y": -0.25982377694546754
+    },
+    {
+      "seed": 3,
+      "model": "models\\box_push_lidar_carton035_seed_3.zip",
+      "start_id": 14,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.6,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -7.898509107454502,
+      "box_target_distance": 1.5999999999833712,
+      "box_x": 1.4000000000166288,
+      "box_y": 1.6548081202092254e-10
+    },
+    {
+      "seed": 3,
+      "model": "models\\box_push_lidar_carton035_seed_3.zip",
+      "start_id": 15,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.6,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -7.917503085138121,
+      "box_target_distance": 1.4989594241031707,
+      "box_x": 1.5104909163064284,
+      "box_y": 0.16805369588927827
+    },
+    {
+      "seed": 3,
+      "model": "models\\box_push_lidar_carton035_seed_3.zip",
+      "start_id": 16,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.3,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -7.32343812376504,
+      "box_target_distance": 1.515124696223687,
+      "box_x": 1.4855834137983233,
+      "box_y": 0.04631682787259154
+    },
+    {
+      "seed": 3,
+      "model": "models\\box_push_lidar_carton035_seed_3.zip",
+      "start_id": 17,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.0,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -64.1886714931026,
+      "box_target_distance": 2.1730463963236604,
+      "box_x": 4.636665190097203,
+      "box_y": 1.42949560898218
+    },
+    {
+      "seed": 3,
+      "model": "models\\box_push_lidar_carton035_seed_3.zip",
+      "start_id": 18,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.3,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -196.12560498189833,
+      "box_target_distance": 8.394399713982057,
+      "box_x": 10.002516975387415,
+      "box_y": -4.629330682454334
+    },
+    {
+      "seed": 3,
+      "model": "models\\box_push_lidar_carton035_seed_3.zip",
+      "start_id": 19,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.6,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -7.964981284878058,
+      "box_target_distance": 1.5999999999845176,
+      "box_x": 1.4000000000154824,
+      "box_y": 1.6547149878931288e-10
+    },
+    {
+      "seed": 4,
+      "model": "models\\box_push_lidar_carton035_seed_4.zip",
+      "start_id": 0,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.6,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -7.61508259287044,
+      "box_target_distance": 1.599999999986299,
+      "box_x": 1.400000000013701,
+      "box_y": 1.656251982329395e-10
+    },
+    {
+      "seed": 4,
+      "model": "models\\box_push_lidar_carton035_seed_4.zip",
+      "start_id": 1,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.3,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -213.02317537128715,
+      "box_target_distance": 8.376032633874914,
+      "box_x": 9.609728468858425,
+      "box_y": 5.144843267943154
+    },
+    {
+      "seed": 4,
+      "model": "models\\box_push_lidar_carton035_seed_4.zip",
+      "start_id": 2,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.0,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -66.91994823018925,
+      "box_target_distance": 2.262817823064975,
+      "box_x": 4.723998487321848,
+      "box_y": -1.4656649399137898
+    },
+    {
+      "seed": 4,
+      "model": "models\\box_push_lidar_carton035_seed_4.zip",
+      "start_id": 3,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.3,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -22.88218521824719,
+      "box_target_distance": 1.956947140510174,
+      "box_x": 2.792882792107828,
+      "box_y": -1.9459559534958384
+    },
+    {
+      "seed": 4,
+      "model": "models\\box_push_lidar_carton035_seed_4.zip",
+      "start_id": 4,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.6,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -8.196190294399004,
+      "box_target_distance": 1.3998677136511306,
+      "box_x": 2.1852548827954363,
+      "box_y": -1.1383409022406976
+    },
+    {
+      "seed": 4,
+      "model": "models\\box_push_lidar_carton035_seed_4.zip",
+      "start_id": 5,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.6,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -7.5088379814339525,
+      "box_target_distance": 1.5999999999854275,
+      "box_x": 1.4000000000145725,
+      "box_y": 1.6384096179359163e-10
+    },
+    {
+      "seed": 4,
+      "model": "models\\box_push_lidar_carton035_seed_4.zip",
+      "start_id": 6,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.3,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": true,
+      "reason": "success",
+      "time_s": 0.5900000000000004,
+      "episode_return": -19.45029744411663,
+      "box_target_distance": 0.33676333652832036,
+      "box_x": 2.7789523978026742,
+      "box_y": 0.25406200501550713
+    },
+    {
+      "seed": 4,
+      "model": "models\\box_push_lidar_carton035_seed_4.zip",
+      "start_id": 7,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.0,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -24.186993507515705,
+      "box_target_distance": 0.7455678757340404,
+      "box_x": 2.587848314018432,
+      "box_y": -0.6212909504162444
+    },
+    {
+      "seed": 4,
+      "model": "models\\box_push_lidar_carton035_seed_4.zip",
+      "start_id": 8,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.3,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -8.870684974972189,
+      "box_target_distance": 1.4651515984541787,
+      "box_x": 2.981582383998608,
+      "box_y": -1.4650358350134853
+    },
+    {
+      "seed": 4,
+      "model": "models\\box_push_lidar_carton035_seed_4.zip",
+      "start_id": 9,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.6,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -7.672308040583092,
+      "box_target_distance": 1.0199142170967748,
+      "box_x": 2.0388854027587118,
+      "box_y": -0.3412971450303143
+    },
+    {
+      "seed": 4,
+      "model": "models\\box_push_lidar_carton035_seed_4.zip",
+      "start_id": 10,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.6,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -7.4211166171024745,
+      "box_target_distance": 1.5999999999846937,
+      "box_x": 1.4000000000153063,
+      "box_y": 1.643744353909109e-10
+    },
+    {
+      "seed": 4,
+      "model": "models\\box_push_lidar_carton035_seed_4.zip",
+      "start_id": 11,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.3,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -7.745763699736349,
+      "box_target_distance": 1.138460216537985,
+      "box_x": 1.8855179534698547,
+      "box_y": 0.23242511181388031
+    },
+    {
+      "seed": 4,
+      "model": "models\\box_push_lidar_carton035_seed_4.zip",
+      "start_id": 12,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.0,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -24.3354436137148,
+      "box_target_distance": 0.8270070597868151,
+      "box_x": 2.321723669132334,
+      "box_y": 0.47316159599224583
+    },
+    {
+      "seed": 4,
+      "model": "models\\box_push_lidar_carton035_seed_4.zip",
+      "start_id": 13,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.3,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": true,
+      "reason": "success",
+      "time_s": 0.6100000000000004,
+      "episode_return": -20.443146485286867,
+      "box_target_distance": 0.3268333866790129,
+      "box_x": 2.8080382984743775,
+      "box_y": -0.26451988166385715
+    },
+    {
+      "seed": 4,
+      "model": "models\\box_push_lidar_carton035_seed_4.zip",
+      "start_id": 14,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.6,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -36.735512312855086,
+      "box_target_distance": 1.3286126724217704,
+      "box_x": 2.6407726850888436,
+      "box_y": -1.2791275814168965
+    },
+    {
+      "seed": 4,
+      "model": "models\\box_push_lidar_carton035_seed_4.zip",
+      "start_id": 15,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.6,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -7.229157533570257,
+      "box_target_distance": 1.5777241003870406,
+      "box_x": 1.422537098873965,
+      "box_y": 0.028707708252827112
+    },
+    {
+      "seed": 4,
+      "model": "models\\box_push_lidar_carton035_seed_4.zip",
+      "start_id": 16,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.3,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -7.679717111881557,
+      "box_target_distance": 0.9904484713853712,
+      "box_x": 2.1216199727617053,
+      "box_y": 0.45764254852283026
+    },
+    {
+      "seed": 4,
+      "model": "models\\box_push_lidar_carton035_seed_4.zip",
+      "start_id": 17,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.0,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -66.69864833526526,
+      "box_target_distance": 2.2859307468054184,
+      "box_x": 4.877193306119508,
+      "box_y": 1.3044633650089565
+    },
+    {
+      "seed": 4,
+      "model": "models\\box_push_lidar_carton035_seed_4.zip",
+      "start_id": 18,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.3,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -182.61092174520783,
+      "box_target_distance": 8.486798704499828,
+      "box_x": 9.883282835592965,
+      "box_y": -4.9644908758029995
+    },
+    {
+      "seed": 4,
+      "model": "models\\box_push_lidar_carton035_seed_4.zip",
+      "start_id": 19,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.6,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -7.523887182709026,
+      "box_target_distance": 1.225090621379581,
+      "box_x": 1.7750377506866315,
+      "box_y": -0.01773466518828473
+    }
+  ],
+  "heatmap": {
+    "columns_car_y_offset_m": [
+      -0.6,
+      -0.3,
+      0.0,
+      0.3,
+      0.6
+    ],
+    "rows_car_yaw_rad": [
+      -0.25,
+      -0.08,
+      0.08,
+      0.25
+    ],
+    "success_rate": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ]
+  }
+}

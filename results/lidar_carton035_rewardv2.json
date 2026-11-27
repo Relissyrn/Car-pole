@@ -1,0 +1,3897 @@
+{
+  "variant": "nominal",
+  "settings": {
+    "latency_steps": 0,
+    "action_noise_std": 0.0,
+    "box_mass_scale": 1.0,
+    "friction_scale": 1.0,
+    "box_floor_friction": 0.35,
+    "car_speed_limit": 1.0,
+    "car_speed_penalty_per_second": 1.0,
+    "lost_bumper_contact_penalty": 1.0,
+    "target_overshoot_penalty": 2.0,
+    "lidar_num_rays": 32,
+    "lidar_max_range": 4.0,
+    "lidar_noise_std": 0.01,
+    "stage": "randomized",
+    "target": [
+      3.0,
+      0.0
+    ],
+    "success_radius": 0.45,
+    "success_hold_steps": 5,
+    "max_steps": 700,
+    "frame_skip": 5
+  },
+  "tuning_effort": {
+    "runs_per_variant": 5,
+    "timesteps_per_run": 1500000,
+    "must_match_for_all_variants": true
+  },
+  "evaluation": {
+    "start_count": 20,
+    "identical_fixed_starts_for_every_seed_and_variant": true,
+    "deterministic_policy": true,
+    "seed_count": 5
+  },
+  "summary_across_seeds": {
+    "success_rate": {
+      "mean": 0.12,
+      "std": 0.0447213595499958
+    },
+    "mean_episode_return": {
+      "mean": -41.21465120472833,
+      "std": 6.26690587002141
+    },
+    "mean_success_time_s": {
+      "mean": 0.9979999999999729,
+      "std": 0.8676231901003414
+    }
+  },
+  "per_seed": [
+    {
+      "seed": 0,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_0.zip",
+      "success_rate": 0.1,
+      "mean_success_time_s": 0.6200000000000004,
+      "mean_episode_return": -36.234899054996326
+    },
+    {
+      "seed": 1,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_1.zip",
+      "success_rate": 0.1,
+      "mean_success_time_s": 0.6000000000000004,
+      "mean_episode_return": -33.76006112302038
+    },
+    {
+      "seed": 2,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_2.zip",
+      "success_rate": 0.2,
+      "mean_success_time_s": 2.5499999999998626,
+      "mean_episode_return": -48.62277180986826
+    },
+    {
+      "seed": 3,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_3.zip",
+      "success_rate": 0.1,
+      "mean_success_time_s": 0.6100000000000004,
+      "mean_episode_return": -41.581149668485175
+    },
+    {
+      "seed": 4,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_4.zip",
+      "success_rate": 0.1,
+      "mean_success_time_s": 0.6100000000000004,
+      "mean_episode_return": -45.874374367271486
+    }
+  ],
+  "failures": [
+    {
+      "seed": 0,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_0.zip",
+      "start_id": 0,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.6,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -18.576122964751523,
+      "box_target_distance": 1.599999999985196,
+      "box_x": 1.400000000014804,
+      "box_y": 1.648592376877795e-10
+    },
+    {
+      "seed": 0,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_0.zip",
+      "start_id": 1,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.3,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -162.59862155239344,
+      "box_target_distance": 8.361553173299598,
+      "box_x": 9.609491293691296,
+      "box_y": 5.121542375938672
+    },
+    {
+      "seed": 0,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_0.zip",
+      "start_id": 2,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.0,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -74.23399498805213,
+      "box_target_distance": 2.244406514223243,
+      "box_x": 4.803834740402732,
+      "box_y": -1.3354927294463033
+    },
+    {
+      "seed": 0,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_0.zip",
+      "start_id": 3,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.3,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -8.334318041648086,
+      "box_target_distance": 1.5152351169081502,
+      "box_x": 1.4854434675208106,
+      "box_y": -0.04534279916667345
+    },
+    {
+      "seed": 0,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_0.zip",
+      "start_id": 4,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.6,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -7.213618491282498,
+      "box_target_distance": 1.538807662063588,
+      "box_x": 1.4623502415043577,
+      "box_y": -0.05968451242909551
+    },
+    {
+      "seed": 0,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_0.zip",
+      "start_id": 5,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.6,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -16.879451378939496,
+      "box_target_distance": 1.5999999999857828,
+      "box_x": 1.4000000000142172,
+      "box_y": 1.6501193146207257e-10
+    },
+    {
+      "seed": 0,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_0.zip",
+      "start_id": 7,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.0,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -25.750920672488597,
+      "box_target_distance": 0.7936025688107922,
+      "box_x": 2.4259859199678324,
+      "box_y": -0.5480080958780741
+    },
+    {
+      "seed": 0,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_0.zip",
+      "start_id": 8,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.3,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -8.32013916334363,
+      "box_target_distance": 1.4562912047747685,
+      "box_x": 1.5452657490877417,
+      "box_y": -0.06732259893302654
+    },
+    {
+      "seed": 0,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_0.zip",
+      "start_id": 9,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.6,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -7.0976923077813705,
+      "box_target_distance": 1.213276038093862,
+      "box_x": 1.900483839732241,
+      "box_y": -0.5129356274648722
+    },
+    {
+      "seed": 0,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_0.zip",
+      "start_id": 10,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.6,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -10.936814954193721,
+      "box_target_distance": 1.5999999999832208,
+      "box_x": 1.4000000000167792,
+      "box_y": 1.6423973700746204e-10
+    },
+    {
+      "seed": 0,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_0.zip",
+      "start_id": 11,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.3,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -11.88690053892799,
+      "box_target_distance": 1.1596408803274396,
+      "box_x": 1.8650982525939468,
+      "box_y": 0.2382540557079482
+    },
+    {
+      "seed": 0,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_0.zip",
+      "start_id": 12,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.0,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -28.651609950298436,
+      "box_target_distance": 0.7916942869562704,
+      "box_x": 2.366600216984835,
+      "box_y": 0.4749574284875848
+    },
+    {
+      "seed": 0,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_0.zip",
+      "start_id": 14,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.6,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -10.24686820173375,
+      "box_target_distance": 1.5999999999838637,
+      "box_x": 1.4000000000161363,
+      "box_y": 1.6467905856917024e-10
+    },
+    {
+      "seed": 0,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_0.zip",
+      "start_id": 15,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.6,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -10.409008096711077,
+      "box_target_distance": 1.6004128327501068,
+      "box_x": 1.399867898891102,
+      "box_y": 0.029974893361684747
+    },
+    {
+      "seed": 0,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_0.zip",
+      "start_id": 16,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.3,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -12.374644384923986,
+      "box_target_distance": 0.9375469326821034,
+      "box_x": 2.4450701013857445,
+      "box_y": 0.7556765568717827
+    },
+    {
+      "seed": 0,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_0.zip",
+      "start_id": 17,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.0,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -68.08868361408948,
+      "box_target_distance": 2.2403881300199884,
+      "box_x": 4.744451955288385,
+      "box_y": 1.4057831798769644
+    },
+    {
+      "seed": 0,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_0.zip",
+      "start_id": 18,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.3,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -188.90713302104862,
+      "box_target_distance": 8.608583077420162,
+      "box_x": 9.688081727016634,
+      "box_y": -5.420079834614154
+    },
+    {
+      "seed": 0,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_0.zip",
+      "start_id": 19,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.6,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -10.15322520948773,
+      "box_target_distance": 1.5999999999861636,
+      "box_x": 1.4000000000138364,
+      "box_y": 1.6407288975586742e-10
+    },
+    {
+      "seed": 1,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_1.zip",
+      "start_id": 0,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.6,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -7.79419208980338,
+      "box_target_distance": 1.5999999999855719,
+      "box_x": 1.4000000000144281,
+      "box_y": 1.64868221950632e-10
+    },
+    {
+      "seed": 1,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_1.zip",
+      "start_id": 1,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.3,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -156.69190398700837,
+      "box_target_distance": 8.462828765728027,
+      "box_x": 9.746646597996293,
+      "box_y": 5.109034194422545
+    },
+    {
+      "seed": 1,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_1.zip",
+      "start_id": 2,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.0,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -68.15743310416272,
+      "box_target_distance": 2.3280267518050004,
+      "box_x": 4.6882431300331335,
+      "box_y": -1.6029796290083256
+    },
+    {
+      "seed": 1,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_1.zip",
+      "start_id": 3,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.3,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -8.350998845183737,
+      "box_target_distance": 1.5160862439950131,
+      "box_x": 1.4845936931204153,
+      "box_y": -0.04540070814958884
+    },
+    {
+      "seed": 1,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_1.zip",
+      "start_id": 4,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.6,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -6.994959100976021,
+      "box_target_distance": 1.5999999999850982,
+      "box_x": 1.4000000000149018,
+      "box_y": 1.6614850944792386e-10
+    },
+    {
+      "seed": 1,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_1.zip",
+      "start_id": 5,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.6,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -7.916500814490459,
+      "box_target_distance": 1.5999999999851664,
+      "box_x": 1.4000000000148336,
+      "box_y": 1.649940051127747e-10
+    },
+    {
+      "seed": 1,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_1.zip",
+      "start_id": 7,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.0,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -24.568804922437444,
+      "box_target_distance": 0.8203424002331892,
+      "box_x": 2.3242517040385615,
+      "box_y": -0.46510847565440255
+    },
+    {
+      "seed": 1,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_1.zip",
+      "start_id": 8,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.3,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -8.277800464312124,
+      "box_target_distance": 1.4562011484663875,
+      "box_x": 1.5452211130155138,
+      "box_y": -0.06434418993977233
+    },
+    {
+      "seed": 1,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_1.zip",
+      "start_id": 9,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.6,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -8.312928266058586,
+      "box_target_distance": 1.5607388685510935,
+      "box_x": 1.440048875579029,
+      "box_y": -0.049581299134810984
+    },
+    {
+      "seed": 1,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_1.zip",
+      "start_id": 10,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.6,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -7.877549610806032,
+      "box_target_distance": 1.5999999999851704,
+      "box_x": 1.4000000000148296,
+      "box_y": 1.6489376404297143e-10
+    },
+    {
+      "seed": 1,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_1.zip",
+      "start_id": 11,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.3,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -8.961928145615818,
+      "box_target_distance": 1.0904198646404215,
+      "box_x": 1.9362140505627043,
+      "box_y": 0.23953065562100065
+    },
+    {
+      "seed": 1,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_1.zip",
+      "start_id": 12,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.0,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -26.422034788088727,
+      "box_target_distance": 0.8236985421723116,
+      "box_x": 2.318277704797183,
+      "box_y": 0.46231374692971716
+    },
+    {
+      "seed": 1,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_1.zip",
+      "start_id": 14,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.6,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -8.550900001841313,
+      "box_target_distance": 1.5999999999847012,
+      "box_x": 1.4000000000152988,
+      "box_y": 1.6462126155646096e-10
+    },
+    {
+      "seed": 1,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_1.zip",
+      "start_id": 15,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.6,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -7.943548599823257,
+      "box_target_distance": 1.5864963506561596,
+      "box_x": 1.4136944146364172,
+      "box_y": 0.024602042387028126
+    },
+    {
+      "seed": 1,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_1.zip",
+      "start_id": 16,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.3,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -8.33214574467832,
+      "box_target_distance": 1.5149509699460717,
+      "box_x": 1.4857392228428452,
+      "box_y": 0.045724611577931555
+    },
+    {
+      "seed": 1,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_1.zip",
+      "start_id": 17,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.0,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -65.96275070336577,
+      "box_target_distance": 2.187035168378807,
+      "box_x": 4.653879540144796,
+      "box_y": 1.4310154766515124
+    },
+    {
+      "seed": 1,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_1.zip",
+      "start_id": 18,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.3,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -193.09434579233596,
+      "box_target_distance": 8.419255258213067,
+      "box_x": 9.876363295267904,
+      "box_y": -4.857930313872432
+    },
+    {
+      "seed": 1,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_1.zip",
+      "start_id": 19,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.6,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -8.806825209245645,
+      "box_target_distance": 1.599999999985119,
+      "box_x": 1.400000000014881,
+      "box_y": 1.652135936752801e-10
+    },
+    {
+      "seed": 2,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_2.zip",
+      "start_id": 0,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.6,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -28.817511968317305,
+      "box_target_distance": 2.3112010196457686,
+      "box_x": 0.7073569956264626,
+      "box_y": -0.2922981486577009
+    },
+    {
+      "seed": 2,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_2.zip",
+      "start_id": 1,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.3,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -188.79916501695735,
+      "box_target_distance": 8.848188743586755,
+      "box_x": 10.154054872307928,
+      "box_y": 5.2067209379937545
+    },
+    {
+      "seed": 2,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_2.zip",
+      "start_id": 2,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.0,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -80.86585336908372,
+      "box_target_distance": 2.2588019647852797,
+      "box_x": 4.718096886362369,
+      "box_y": -1.4664001517968324
+    },
+    {
+      "seed": 2,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_2.zip",
+      "start_id": 4,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.6,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -27.184512337652453,
+      "box_target_distance": 0.7580409610645011,
+      "box_x": 2.3118596837530507,
+      "box_y": -0.3179449697780124
+    },
+    {
+      "seed": 2,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_2.zip",
+      "start_id": 5,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.6,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -18.460658415281348,
+      "box_target_distance": 2.6920913964442144,
+      "box_x": 0.325024445066313,
+      "box_y": 0.30308722724023585
+    },
+    {
+      "seed": 2,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_2.zip",
+      "start_id": 8,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.3,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -55.99282295547451,
+      "box_target_distance": 1.171957287971605,
+      "box_x": 3.2324769805118567,
+      "box_y": 1.1486680714470343
+    },
+    {
+      "seed": 2,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_2.zip",
+      "start_id": 9,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.6,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -29.047843172155616,
+      "box_target_distance": 0.6762328253893141,
+      "box_x": 2.4352147142981804,
+      "box_y": -0.37189839363558497
+    },
+    {
+      "seed": 2,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_2.zip",
+      "start_id": 10,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.6,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -7.0890708464204195,
+      "box_target_distance": 1.3396674298127038,
+      "box_x": 1.6997289044971933,
+      "box_y": 0.32249635765525614
+    },
+    {
+      "seed": 2,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_2.zip",
+      "start_id": 11,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.3,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -8.297947079408058,
+      "box_target_distance": 1.4563895566097296,
+      "box_x": 1.5450938700756878,
+      "box_y": 0.0657167688687233
+    },
+    {
+      "seed": 2,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_2.zip",
+      "start_id": 12,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.0,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -49.71896627394317,
+      "box_target_distance": 1.6067438552595301,
+      "box_x": 2.962159785783591,
+      "box_y": 1.6062982084912858
+    },
+    {
+      "seed": 2,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_2.zip",
+      "start_id": 14,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.6,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -36.072992332891005,
+      "box_target_distance": 0.6970714861629496,
+      "box_x": 2.522243027366491,
+      "box_y": 0.5075991843191708
+    },
+    {
+      "seed": 2,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_2.zip",
+      "start_id": 15,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.6,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -6.996449854959784,
+      "box_target_distance": 1.5484608231362358,
+      "box_x": 1.4525345440377542,
+      "box_y": 0.05551201123457519
+    },
+    {
+      "seed": 2,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_2.zip",
+      "start_id": 16,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.3,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -8.37516392015834,
+      "box_target_distance": 1.5161323572132177,
+      "box_x": 1.4845272773580505,
+      "box_y": 0.0447185813404758
+    },
+    {
+      "seed": 2,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_2.zip",
+      "start_id": 17,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.0,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -82.03079781346894,
+      "box_target_distance": 2.281141191139464,
+      "box_x": 4.863873332391656,
+      "box_y": 1.3151354815046228
+    },
+    {
+      "seed": 2,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_2.zip",
+      "start_id": 18,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.3,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -195.69734146114186,
+      "box_target_distance": 8.812613969007694,
+      "box_x": 9.94798408453908,
+      "box_y": -5.421040686781572
+    },
+    {
+      "seed": 2,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_2.zip",
+      "start_id": 19,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.6,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -50.433014719255084,
+      "box_target_distance": 1.7265729300424215,
+      "box_x": 2.6383821585377447,
+      "box_y": 1.6882791888462796
+    },
+    {
+      "seed": 3,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_3.zip",
+      "start_id": 0,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.6,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -8.48711162274715,
+      "box_target_distance": 1.5999999999854035,
+      "box_x": 1.4000000000145965,
+      "box_y": 1.6436559963266392e-10
+    },
+    {
+      "seed": 3,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_3.zip",
+      "start_id": 1,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.3,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -196.49655080927252,
+      "box_target_distance": 8.412380473503347,
+      "box_x": 9.697192725369353,
+      "box_y": 5.0907518924261295
+    },
+    {
+      "seed": 3,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_3.zip",
+      "start_id": 2,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.0,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -69.28977954516077,
+      "box_target_distance": 2.3211153493680126,
+      "box_x": 4.699811603956749,
+      "box_y": -1.5805748878575085
+    },
+    {
+      "seed": 3,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_3.zip",
+      "start_id": 3,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.3,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -9.010824944528384,
+      "box_target_distance": 1.0517661106395126,
+      "box_x": 1.967087966585285,
+      "box_y": -0.19825408625510388
+    },
+    {
+      "seed": 3,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_3.zip",
+      "start_id": 4,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.6,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -7.970093966765355,
+      "box_target_distance": 1.5999999999842671,
+      "box_x": 1.4000000000157329,
+      "box_y": 1.6367072732684993e-10
+    },
+    {
+      "seed": 3,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_3.zip",
+      "start_id": 5,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.6,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -8.639552734711094,
+      "box_target_distance": 1.5593370184350248,
+      "box_x": 1.4426541265246724,
+      "box_y": 0.07877669345182069
+    },
+    {
+      "seed": 3,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_3.zip",
+      "start_id": 7,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.0,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -28.102538510305695,
+      "box_target_distance": 0.8498215251532429,
+      "box_x": 2.3002784330407557,
+      "box_y": -0.48227207398509386
+    },
+    {
+      "seed": 3,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_3.zip",
+      "start_id": 8,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.3,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -9.606309990754395,
+      "box_target_distance": 1.2288530399751654,
+      "box_x": 1.7746724338084594,
+      "box_y": -0.09301693064878715
+    },
+    {
+      "seed": 3,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_3.zip",
+      "start_id": 9,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.6,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -8.051027750295132,
+      "box_target_distance": 1.5999999999845866,
+      "box_x": 1.4000000000154134,
+      "box_y": 1.6621708174442666e-10
+    },
+    {
+      "seed": 3,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_3.zip",
+      "start_id": 10,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.6,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -8.502554191962105,
+      "box_target_distance": 1.4433283131808643,
+      "box_x": 1.5813937353333436,
+      "box_y": 0.26599414557097933
+    },
+    {
+      "seed": 3,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_3.zip",
+      "start_id": 11,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.3,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -88.56825045555192,
+      "box_target_distance": 0.9811627895268341,
+      "box_x": 2.2262022170343188,
+      "box_y": 0.6032556760027004
+    },
+    {
+      "seed": 3,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_3.zip",
+      "start_id": 12,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.0,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -29.865167744911606,
+      "box_target_distance": 0.808833789515292,
+      "box_x": 2.4177516964722425,
+      "box_y": 0.5614258740926678
+    },
+    {
+      "seed": 3,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_3.zip",
+      "start_id": 14,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.6,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -8.881234236334732,
+      "box_target_distance": 1.599999999984779,
+      "box_x": 1.400000000015221,
+      "box_y": 1.6535664120781957e-10
+    },
+    {
+      "seed": 3,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_3.zip",
+      "start_id": 15,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.6,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -7.86900099487653,
+      "box_target_distance": 1.2664923726742163,
+      "box_x": 2.2184184541588587,
+      "box_y": 0.9965606942091074
+    },
+    {
+      "seed": 3,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_3.zip",
+      "start_id": 16,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.3,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -8.346714614903771,
+      "box_target_distance": 1.5157100577861182,
+      "box_x": 1.4849738201000575,
+      "box_y": 0.04552640433621639
+    },
+    {
+      "seed": 3,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_3.zip",
+      "start_id": 17,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.0,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -73.81643761075601,
+      "box_target_distance": 2.2832917580358316,
+      "box_x": 4.711168054250575,
+      "box_y": 1.5117291895133396
+    },
+    {
+      "seed": 3,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_3.zip",
+      "start_id": 18,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.3,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -204.4634716329432,
+      "box_target_distance": 8.766686720774743,
+      "box_x": 9.857450017995209,
+      "box_y": -5.461700770905134
+    },
+    {
+      "seed": 3,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_3.zip",
+      "start_id": 19,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.6,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -12.444958721318512,
+      "box_target_distance": 1.599999999984735,
+      "box_x": 1.400000000015265,
+      "box_y": 1.6504334254712878e-10
+    },
+    {
+      "seed": 4,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_4.zip",
+      "start_id": 0,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.6,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -19.701212333212364,
+      "box_target_distance": 1.5999999999835717,
+      "box_x": 1.4000000000164283,
+      "box_y": 1.6552240548324305e-10
+    },
+    {
+      "seed": 4,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_4.zip",
+      "start_id": 1,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.3,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -195.41257692296426,
+      "box_target_distance": 8.566481200945105,
+      "box_x": 9.684771762319372,
+      "box_y": 5.357091249161568
+    },
+    {
+      "seed": 4,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_4.zip",
+      "start_id": 2,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.0,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -80.27133448545997,
+      "box_target_distance": 2.2669201196079047,
+      "box_x": 4.851532398911958,
+      "box_y": -1.307958181465465
+    },
+    {
+      "seed": 4,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_4.zip",
+      "start_id": 3,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.3,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -18.60445943131731,
+      "box_target_distance": 1.5660207533116275,
+      "box_x": 2.146672868360092,
+      "box_y": -1.3131084518081224
+    },
+    {
+      "seed": 4,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_4.zip",
+      "start_id": 4,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.6,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -51.851583243710884,
+      "box_target_distance": 0.834304178621434,
+      "box_x": 3.287211886065928,
+      "box_y": 0.7833088758386683
+    },
+    {
+      "seed": 4,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_4.zip",
+      "start_id": 5,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.6,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -19.387467135529118,
+      "box_target_distance": 1.5999999999867374,
+      "box_x": 1.4000000000132626,
+      "box_y": 1.646625290261584e-10
+    },
+    {
+      "seed": 4,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_4.zip",
+      "start_id": 7,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.0,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -60.185229054202836,
+      "box_target_distance": 1.9395268524442242,
+      "box_x": 4.051084981999604,
+      "box_y": -1.63002600346347
+    },
+    {
+      "seed": 4,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_4.zip",
+      "start_id": 8,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.3,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -17.860774725209506,
+      "box_target_distance": 1.1052770163290622,
+      "box_x": 1.9930284073251234,
+      "box_y": -0.455681351792123
+    },
+    {
+      "seed": 4,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_4.zip",
+      "start_id": 9,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.6,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -17.341554679322236,
+      "box_target_distance": 1.5519020411463587,
+      "box_x": 1.4504784303545797,
+      "box_y": -0.08592351551133859
+    },
+    {
+      "seed": 4,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_4.zip",
+      "start_id": 10,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.6,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -18.031114936615943,
+      "box_target_distance": 1.5999999999860774,
+      "box_x": 1.4000000000139226,
+      "box_y": 1.636210390116087e-10
+    },
+    {
+      "seed": 4,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_4.zip",
+      "start_id": 11,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.3,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -18.579483739143967,
+      "box_target_distance": 1.1184053974410362,
+      "box_x": 1.9034312159392657,
+      "box_y": 0.2199262031882624
+    },
+    {
+      "seed": 4,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_4.zip",
+      "start_id": 12,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.0,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -37.4321095321762,
+      "box_target_distance": 0.8097581738527835,
+      "box_x": 2.3300144054519873,
+      "box_y": 0.45478302872858045
+    },
+    {
+      "seed": 4,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_4.zip",
+      "start_id": 14,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.6,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -18.187664136144054,
+      "box_target_distance": 1.3745868230495746,
+      "box_x": 1.6403199933742,
+      "box_y": 0.20188911234533446
+    },
+    {
+      "seed": 4,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_4.zip",
+      "start_id": 15,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.6,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -17.38340379544465,
+      "box_target_distance": 1.593019401173348,
+      "box_x": 1.40704927167992,
+      "box_y": 0.014791540123294903
+    },
+    {
+      "seed": 4,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_4.zip",
+      "start_id": 16,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.3,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -17.736649235459318,
+      "box_target_distance": 1.005245698002193,
+      "box_x": 2.0395956617680358,
+      "box_y": 0.2968878920689412
+    },
+    {
+      "seed": 4,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_4.zip",
+      "start_id": 17,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.0,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -78.0347503553437,
+      "box_target_distance": 2.2815357577432667,
+      "box_x": 4.844303549135152,
+      "box_y": 1.3431119955195936
+    },
+    {
+      "seed": 4,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_4.zip",
+      "start_id": 18,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.3,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -170.9998699622688,
+      "box_target_distance": 8.52726120523521,
+      "box_x": 9.768695871426033,
+      "box_y": -5.186418789728575
+    },
+    {
+      "seed": 4,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_4.zip",
+      "start_id": 19,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.6,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -17.3537358677952,
+      "box_target_distance": 1.5999999999848133,
+      "box_x": 1.4000000000151867,
+      "box_y": 1.638111476886498e-10
+    }
+  ],
+  "episode_results": [
+    {
+      "seed": 0,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_0.zip",
+      "start_id": 0,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.6,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -18.576122964751523,
+      "box_target_distance": 1.599999999985196,
+      "box_x": 1.400000000014804,
+      "box_y": 1.648592376877795e-10
+    },
+    {
+      "seed": 0,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_0.zip",
+      "start_id": 1,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.3,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -162.59862155239344,
+      "box_target_distance": 8.361553173299598,
+      "box_x": 9.609491293691296,
+      "box_y": 5.121542375938672
+    },
+    {
+      "seed": 0,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_0.zip",
+      "start_id": 2,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.0,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -74.23399498805213,
+      "box_target_distance": 2.244406514223243,
+      "box_x": 4.803834740402732,
+      "box_y": -1.3354927294463033
+    },
+    {
+      "seed": 0,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_0.zip",
+      "start_id": 3,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.3,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -8.334318041648086,
+      "box_target_distance": 1.5152351169081502,
+      "box_x": 1.4854434675208106,
+      "box_y": -0.04534279916667345
+    },
+    {
+      "seed": 0,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_0.zip",
+      "start_id": 4,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.6,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -7.213618491282498,
+      "box_target_distance": 1.538807662063588,
+      "box_x": 1.4623502415043577,
+      "box_y": -0.05968451242909551
+    },
+    {
+      "seed": 0,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_0.zip",
+      "start_id": 5,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.6,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -16.879451378939496,
+      "box_target_distance": 1.5999999999857828,
+      "box_x": 1.4000000000142172,
+      "box_y": 1.6501193146207257e-10
+    },
+    {
+      "seed": 0,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_0.zip",
+      "start_id": 6,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.3,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": true,
+      "reason": "success",
+      "time_s": 0.6200000000000004,
+      "episode_return": -21.92575587048224,
+      "box_target_distance": 0.32031326352503786,
+      "box_x": 2.821224240777702,
+      "box_y": 0.26578151686028006
+    },
+    {
+      "seed": 0,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_0.zip",
+      "start_id": 7,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.0,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -25.750920672488597,
+      "box_target_distance": 0.7936025688107922,
+      "box_x": 2.4259859199678324,
+      "box_y": -0.5480080958780741
+    },
+    {
+      "seed": 0,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_0.zip",
+      "start_id": 8,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.3,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -8.32013916334363,
+      "box_target_distance": 1.4562912047747685,
+      "box_x": 1.5452657490877417,
+      "box_y": -0.06732259893302654
+    },
+    {
+      "seed": 0,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_0.zip",
+      "start_id": 9,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.6,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -7.0976923077813705,
+      "box_target_distance": 1.213276038093862,
+      "box_x": 1.900483839732241,
+      "box_y": -0.5129356274648722
+    },
+    {
+      "seed": 0,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_0.zip",
+      "start_id": 10,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.6,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -10.936814954193721,
+      "box_target_distance": 1.5999999999832208,
+      "box_x": 1.4000000000167792,
+      "box_y": 1.6423973700746204e-10
+    },
+    {
+      "seed": 0,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_0.zip",
+      "start_id": 11,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.3,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -11.88690053892799,
+      "box_target_distance": 1.1596408803274396,
+      "box_x": 1.8650982525939468,
+      "box_y": 0.2382540557079482
+    },
+    {
+      "seed": 0,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_0.zip",
+      "start_id": 12,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.0,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -28.651609950298436,
+      "box_target_distance": 0.7916942869562704,
+      "box_x": 2.366600216984835,
+      "box_y": 0.4749574284875848
+    },
+    {
+      "seed": 0,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_0.zip",
+      "start_id": 13,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.3,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": true,
+      "reason": "success",
+      "time_s": 0.6200000000000004,
+      "episode_return": -22.112457697348745,
+      "box_target_distance": 0.3296251055245093,
+      "box_x": 2.811023675707378,
+      "box_y": -0.27007528403927245
+    },
+    {
+      "seed": 0,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_0.zip",
+      "start_id": 14,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.6,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -10.24686820173375,
+      "box_target_distance": 1.5999999999838637,
+      "box_x": 1.4000000000161363,
+      "box_y": 1.6467905856917024e-10
+    },
+    {
+      "seed": 0,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_0.zip",
+      "start_id": 15,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.6,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -10.409008096711077,
+      "box_target_distance": 1.6004128327501068,
+      "box_x": 1.399867898891102,
+      "box_y": 0.029974893361684747
+    },
+    {
+      "seed": 0,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_0.zip",
+      "start_id": 16,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.3,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -12.374644384923986,
+      "box_target_distance": 0.9375469326821034,
+      "box_x": 2.4450701013857445,
+      "box_y": 0.7556765568717827
+    },
+    {
+      "seed": 0,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_0.zip",
+      "start_id": 17,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.0,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -68.08868361408948,
+      "box_target_distance": 2.2403881300199884,
+      "box_x": 4.744451955288385,
+      "box_y": 1.4057831798769644
+    },
+    {
+      "seed": 0,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_0.zip",
+      "start_id": 18,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.3,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -188.90713302104862,
+      "box_target_distance": 8.608583077420162,
+      "box_x": 9.688081727016634,
+      "box_y": -5.420079834614154
+    },
+    {
+      "seed": 0,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_0.zip",
+      "start_id": 19,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.6,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -10.15322520948773,
+      "box_target_distance": 1.5999999999861636,
+      "box_x": 1.4000000000138364,
+      "box_y": 1.6407288975586742e-10
+    },
+    {
+      "seed": 1,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_1.zip",
+      "start_id": 0,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.6,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -7.79419208980338,
+      "box_target_distance": 1.5999999999855719,
+      "box_x": 1.4000000000144281,
+      "box_y": 1.64868221950632e-10
+    },
+    {
+      "seed": 1,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_1.zip",
+      "start_id": 1,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.3,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -156.69190398700837,
+      "box_target_distance": 8.462828765728027,
+      "box_x": 9.746646597996293,
+      "box_y": 5.109034194422545
+    },
+    {
+      "seed": 1,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_1.zip",
+      "start_id": 2,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.0,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -68.15743310416272,
+      "box_target_distance": 2.3280267518050004,
+      "box_x": 4.6882431300331335,
+      "box_y": -1.6029796290083256
+    },
+    {
+      "seed": 1,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_1.zip",
+      "start_id": 3,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.3,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -8.350998845183737,
+      "box_target_distance": 1.5160862439950131,
+      "box_x": 1.4845936931204153,
+      "box_y": -0.04540070814958884
+    },
+    {
+      "seed": 1,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_1.zip",
+      "start_id": 4,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.6,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -6.994959100976021,
+      "box_target_distance": 1.5999999999850982,
+      "box_x": 1.4000000000149018,
+      "box_y": 1.6614850944792386e-10
+    },
+    {
+      "seed": 1,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_1.zip",
+      "start_id": 5,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.6,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -7.916500814490459,
+      "box_target_distance": 1.5999999999851664,
+      "box_x": 1.4000000000148336,
+      "box_y": 1.649940051127747e-10
+    },
+    {
+      "seed": 1,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_1.zip",
+      "start_id": 6,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.3,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": true,
+      "reason": "success",
+      "time_s": 0.6100000000000004,
+      "episode_return": -21.69632320758957,
+      "box_target_distance": 0.32642858133239266,
+      "box_x": 2.8036482782158925,
+      "box_y": 0.2607712025187883
+    },
+    {
+      "seed": 1,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_1.zip",
+      "start_id": 7,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.0,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -24.568804922437444,
+      "box_target_distance": 0.8203424002331892,
+      "box_x": 2.3242517040385615,
+      "box_y": -0.46510847565440255
+    },
+    {
+      "seed": 1,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_1.zip",
+      "start_id": 8,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.3,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -8.277800464312124,
+      "box_target_distance": 1.4562011484663875,
+      "box_x": 1.5452211130155138,
+      "box_y": -0.06434418993977233
+    },
+    {
+      "seed": 1,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_1.zip",
+      "start_id": 9,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.6,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -8.312928266058586,
+      "box_target_distance": 1.5607388685510935,
+      "box_x": 1.440048875579029,
+      "box_y": -0.049581299134810984
+    },
+    {
+      "seed": 1,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_1.zip",
+      "start_id": 10,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.6,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -7.877549610806032,
+      "box_target_distance": 1.5999999999851704,
+      "box_x": 1.4000000000148296,
+      "box_y": 1.6489376404297143e-10
+    },
+    {
+      "seed": 1,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_1.zip",
+      "start_id": 11,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.3,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -8.961928145615818,
+      "box_target_distance": 1.0904198646404215,
+      "box_x": 1.9362140505627043,
+      "box_y": 0.23953065562100065
+    },
+    {
+      "seed": 1,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_1.zip",
+      "start_id": 12,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.0,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -26.422034788088727,
+      "box_target_distance": 0.8236985421723116,
+      "box_x": 2.318277704797183,
+      "box_y": 0.46231374692971716
+    },
+    {
+      "seed": 1,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_1.zip",
+      "start_id": 13,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.3,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": true,
+      "reason": "success",
+      "time_s": 0.5900000000000004,
+      "episode_return": -20.487349062584457,
+      "box_target_distance": 0.34342098546715205,
+      "box_x": 2.77102749573486,
+      "box_y": -0.2559483650070465
+    },
+    {
+      "seed": 1,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_1.zip",
+      "start_id": 14,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.6,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -8.550900001841313,
+      "box_target_distance": 1.5999999999847012,
+      "box_x": 1.4000000000152988,
+      "box_y": 1.6462126155646096e-10
+    },
+    {
+      "seed": 1,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_1.zip",
+      "start_id": 15,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.6,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -7.943548599823257,
+      "box_target_distance": 1.5864963506561596,
+      "box_x": 1.4136944146364172,
+      "box_y": 0.024602042387028126
+    },
+    {
+      "seed": 1,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_1.zip",
+      "start_id": 16,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.3,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -8.33214574467832,
+      "box_target_distance": 1.5149509699460717,
+      "box_x": 1.4857392228428452,
+      "box_y": 0.045724611577931555
+    },
+    {
+      "seed": 1,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_1.zip",
+      "start_id": 17,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.0,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -65.96275070336577,
+      "box_target_distance": 2.187035168378807,
+      "box_x": 4.653879540144796,
+      "box_y": 1.4310154766515124
+    },
+    {
+      "seed": 1,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_1.zip",
+      "start_id": 18,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.3,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -193.09434579233596,
+      "box_target_distance": 8.419255258213067,
+      "box_x": 9.876363295267904,
+      "box_y": -4.857930313872432
+    },
+    {
+      "seed": 1,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_1.zip",
+      "start_id": 19,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.6,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -8.806825209245645,
+      "box_target_distance": 1.599999999985119,
+      "box_x": 1.400000000014881,
+      "box_y": 1.652135936752801e-10
+    },
+    {
+      "seed": 2,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_2.zip",
+      "start_id": 0,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.6,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -28.817511968317305,
+      "box_target_distance": 2.3112010196457686,
+      "box_x": 0.7073569956264626,
+      "box_y": -0.2922981486577009
+    },
+    {
+      "seed": 2,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_2.zip",
+      "start_id": 1,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.3,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -188.79916501695735,
+      "box_target_distance": 8.848188743586755,
+      "box_x": 10.154054872307928,
+      "box_y": 5.2067209379937545
+    },
+    {
+      "seed": 2,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_2.zip",
+      "start_id": 2,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.0,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -80.86585336908372,
+      "box_target_distance": 2.2588019647852797,
+      "box_x": 4.718096886362369,
+      "box_y": -1.4664001517968324
+    },
+    {
+      "seed": 2,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_2.zip",
+      "start_id": 3,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.3,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": true,
+      "reason": "success",
+      "time_s": 4.609999999999714,
+      "episode_return": -17.023000871014048,
+      "box_target_distance": 0.42559558733266994,
+      "box_x": 2.7190187579837533,
+      "box_y": -0.31965785707854527
+    },
+    {
+      "seed": 2,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_2.zip",
+      "start_id": 4,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.6,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -27.184512337652453,
+      "box_target_distance": 0.7580409610645011,
+      "box_x": 2.3118596837530507,
+      "box_y": -0.3179449697780124
+    },
+    {
+      "seed": 2,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_2.zip",
+      "start_id": 5,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.6,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -18.460658415281348,
+      "box_target_distance": 2.6920913964442144,
+      "box_x": 0.325024445066313,
+      "box_y": 0.30308722724023585
+    },
+    {
+      "seed": 2,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_2.zip",
+      "start_id": 6,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.3,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": true,
+      "reason": "success",
+      "time_s": 0.5800000000000004,
+      "episode_return": -20.222826084625275,
+      "box_target_distance": 0.3508186326627391,
+      "box_x": 2.7553889231296504,
+      "box_y": 0.2514739232916245
+    },
+    {
+      "seed": 2,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_2.zip",
+      "start_id": 7,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.0,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": true,
+      "reason": "success",
+      "time_s": 4.409999999999736,
+      "episode_return": -40.20726974553534,
+      "box_target_distance": 0.10146623698355625,
+      "box_x": 2.9373005875006597,
+      "box_y": 0.07977581663537371
+    },
+    {
+      "seed": 2,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_2.zip",
+      "start_id": 8,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.3,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -55.99282295547451,
+      "box_target_distance": 1.171957287971605,
+      "box_x": 3.2324769805118567,
+      "box_y": 1.1486680714470343
+    },
+    {
+      "seed": 2,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_2.zip",
+      "start_id": 9,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.6,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -29.047843172155616,
+      "box_target_distance": 0.6762328253893141,
+      "box_x": 2.4352147142981804,
+      "box_y": -0.37189839363558497
+    },
+    {
+      "seed": 2,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_2.zip",
+      "start_id": 10,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.6,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -7.0890708464204195,
+      "box_target_distance": 1.3396674298127038,
+      "box_x": 1.6997289044971933,
+      "box_y": 0.32249635765525614
+    },
+    {
+      "seed": 2,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_2.zip",
+      "start_id": 11,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.3,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -8.297947079408058,
+      "box_target_distance": 1.4563895566097296,
+      "box_x": 1.5450938700756878,
+      "box_y": 0.0657167688687233
+    },
+    {
+      "seed": 2,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_2.zip",
+      "start_id": 12,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.0,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -49.71896627394317,
+      "box_target_distance": 1.6067438552595301,
+      "box_x": 2.962159785783591,
+      "box_y": 1.6062982084912858
+    },
+    {
+      "seed": 2,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_2.zip",
+      "start_id": 13,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.3,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": true,
+      "reason": "success",
+      "time_s": 0.6000000000000004,
+      "episode_return": -21.122227959621597,
+      "box_target_distance": 0.32890546835343093,
+      "box_x": 2.795002512682114,
+      "box_y": -0.25720582673443243
+    },
+    {
+      "seed": 2,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_2.zip",
+      "start_id": 14,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.6,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -36.072992332891005,
+      "box_target_distance": 0.6970714861629496,
+      "box_x": 2.522243027366491,
+      "box_y": 0.5075991843191708
+    },
+    {
+      "seed": 2,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_2.zip",
+      "start_id": 15,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.6,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -6.996449854959784,
+      "box_target_distance": 1.5484608231362358,
+      "box_x": 1.4525345440377542,
+      "box_y": 0.05551201123457519
+    },
+    {
+      "seed": 2,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_2.zip",
+      "start_id": 16,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.3,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -8.37516392015834,
+      "box_target_distance": 1.5161323572132177,
+      "box_x": 1.4845272773580505,
+      "box_y": 0.0447185813404758
+    },
+    {
+      "seed": 2,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_2.zip",
+      "start_id": 17,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.0,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -82.03079781346894,
+      "box_target_distance": 2.281141191139464,
+      "box_x": 4.863873332391656,
+      "box_y": 1.3151354815046228
+    },
+    {
+      "seed": 2,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_2.zip",
+      "start_id": 18,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.3,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -195.69734146114186,
+      "box_target_distance": 8.812613969007694,
+      "box_x": 9.94798408453908,
+      "box_y": -5.421040686781572
+    },
+    {
+      "seed": 2,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_2.zip",
+      "start_id": 19,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.6,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -50.433014719255084,
+      "box_target_distance": 1.7265729300424215,
+      "box_x": 2.6383821585377447,
+      "box_y": 1.6882791888462796
+    },
+    {
+      "seed": 3,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_3.zip",
+      "start_id": 0,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.6,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -8.48711162274715,
+      "box_target_distance": 1.5999999999854035,
+      "box_x": 1.4000000000145965,
+      "box_y": 1.6436559963266392e-10
+    },
+    {
+      "seed": 3,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_3.zip",
+      "start_id": 1,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.3,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -196.49655080927252,
+      "box_target_distance": 8.412380473503347,
+      "box_x": 9.697192725369353,
+      "box_y": 5.0907518924261295
+    },
+    {
+      "seed": 3,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_3.zip",
+      "start_id": 2,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.0,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -69.28977954516077,
+      "box_target_distance": 2.3211153493680126,
+      "box_x": 4.699811603956749,
+      "box_y": -1.5805748878575085
+    },
+    {
+      "seed": 3,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_3.zip",
+      "start_id": 3,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.3,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -9.010824944528384,
+      "box_target_distance": 1.0517661106395126,
+      "box_x": 1.967087966585285,
+      "box_y": -0.19825408625510388
+    },
+    {
+      "seed": 3,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_3.zip",
+      "start_id": 4,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.6,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -7.970093966765355,
+      "box_target_distance": 1.5999999999842671,
+      "box_x": 1.4000000000157329,
+      "box_y": 1.6367072732684993e-10
+    },
+    {
+      "seed": 3,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_3.zip",
+      "start_id": 5,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.6,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -8.639552734711094,
+      "box_target_distance": 1.5593370184350248,
+      "box_x": 1.4426541265246724,
+      "box_y": 0.07877669345182069
+    },
+    {
+      "seed": 3,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_3.zip",
+      "start_id": 6,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.3,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": true,
+      "reason": "success",
+      "time_s": 0.6100000000000004,
+      "episode_return": -21.673990456644646,
+      "box_target_distance": 0.32792138889683625,
+      "box_x": 2.8049041760257762,
+      "box_y": 0.2635717298267187
+    },
+    {
+      "seed": 3,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_3.zip",
+      "start_id": 7,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.0,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -28.102538510305695,
+      "box_target_distance": 0.8498215251532429,
+      "box_x": 2.3002784330407557,
+      "box_y": -0.48227207398509386
+    },
+    {
+      "seed": 3,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_3.zip",
+      "start_id": 8,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.3,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -9.606309990754395,
+      "box_target_distance": 1.2288530399751654,
+      "box_x": 1.7746724338084594,
+      "box_y": -0.09301693064878715
+    },
+    {
+      "seed": 3,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_3.zip",
+      "start_id": 9,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.6,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -8.051027750295132,
+      "box_target_distance": 1.5999999999845866,
+      "box_x": 1.4000000000154134,
+      "box_y": 1.6621708174442666e-10
+    },
+    {
+      "seed": 3,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_3.zip",
+      "start_id": 10,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.6,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -8.502554191962105,
+      "box_target_distance": 1.4433283131808643,
+      "box_x": 1.5813937353333436,
+      "box_y": 0.26599414557097933
+    },
+    {
+      "seed": 3,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_3.zip",
+      "start_id": 11,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.3,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -88.56825045555192,
+      "box_target_distance": 0.9811627895268341,
+      "box_x": 2.2262022170343188,
+      "box_y": 0.6032556760027004
+    },
+    {
+      "seed": 3,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_3.zip",
+      "start_id": 12,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.0,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -29.865167744911606,
+      "box_target_distance": 0.808833789515292,
+      "box_x": 2.4177516964722425,
+      "box_y": 0.5614258740926678
+    },
+    {
+      "seed": 3,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_3.zip",
+      "start_id": 13,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.3,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": true,
+      "reason": "success",
+      "time_s": 0.6100000000000004,
+      "episode_return": -21.53742283496009,
+      "box_target_distance": 0.32554803386302283,
+      "box_x": 2.8061723170634396,
+      "box_y": -0.26155754946000714
+    },
+    {
+      "seed": 3,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_3.zip",
+      "start_id": 14,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.6,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -8.881234236334732,
+      "box_target_distance": 1.599999999984779,
+      "box_x": 1.400000000015221,
+      "box_y": 1.6535664120781957e-10
+    },
+    {
+      "seed": 3,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_3.zip",
+      "start_id": 15,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.6,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -7.86900099487653,
+      "box_target_distance": 1.2664923726742163,
+      "box_x": 2.2184184541588587,
+      "box_y": 0.9965606942091074
+    },
+    {
+      "seed": 3,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_3.zip",
+      "start_id": 16,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.3,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -8.346714614903771,
+      "box_target_distance": 1.5157100577861182,
+      "box_x": 1.4849738201000575,
+      "box_y": 0.04552640433621639
+    },
+    {
+      "seed": 3,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_3.zip",
+      "start_id": 17,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.0,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -73.81643761075601,
+      "box_target_distance": 2.2832917580358316,
+      "box_x": 4.711168054250575,
+      "box_y": 1.5117291895133396
+    },
+    {
+      "seed": 3,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_3.zip",
+      "start_id": 18,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.3,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -204.4634716329432,
+      "box_target_distance": 8.766686720774743,
+      "box_x": 9.857450017995209,
+      "box_y": -5.461700770905134
+    },
+    {
+      "seed": 3,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_3.zip",
+      "start_id": 19,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.6,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -12.444958721318512,
+      "box_target_distance": 1.599999999984735,
+      "box_x": 1.400000000015265,
+      "box_y": 1.6504334254712878e-10
+    },
+    {
+      "seed": 4,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_4.zip",
+      "start_id": 0,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.6,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -19.701212333212364,
+      "box_target_distance": 1.5999999999835717,
+      "box_x": 1.4000000000164283,
+      "box_y": 1.6552240548324305e-10
+    },
+    {
+      "seed": 4,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_4.zip",
+      "start_id": 1,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.3,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -195.41257692296426,
+      "box_target_distance": 8.566481200945105,
+      "box_x": 9.684771762319372,
+      "box_y": 5.357091249161568
+    },
+    {
+      "seed": 4,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_4.zip",
+      "start_id": 2,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.0,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -80.27133448545997,
+      "box_target_distance": 2.2669201196079047,
+      "box_x": 4.851532398911958,
+      "box_y": -1.307958181465465
+    },
+    {
+      "seed": 4,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_4.zip",
+      "start_id": 3,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.3,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -18.60445943131731,
+      "box_target_distance": 1.5660207533116275,
+      "box_x": 2.146672868360092,
+      "box_y": -1.3131084518081224
+    },
+    {
+      "seed": 4,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_4.zip",
+      "start_id": 4,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.6,
+        "car_yaw": -0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -51.851583243710884,
+      "box_target_distance": 0.834304178621434,
+      "box_x": 3.287211886065928,
+      "box_y": 0.7833088758386683
+    },
+    {
+      "seed": 4,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_4.zip",
+      "start_id": 5,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.6,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -19.387467135529118,
+      "box_target_distance": 1.5999999999867374,
+      "box_x": 1.4000000000132626,
+      "box_y": 1.646625290261584e-10
+    },
+    {
+      "seed": 4,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_4.zip",
+      "start_id": 6,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.3,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": true,
+      "reason": "success",
+      "time_s": 0.6100000000000004,
+      "episode_return": -21.45377116237661,
+      "box_target_distance": 0.3227929216076002,
+      "box_x": 2.809371876407465,
+      "box_y": 0.2604922047500836
+    },
+    {
+      "seed": 4,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_4.zip",
+      "start_id": 7,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.0,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -60.185229054202836,
+      "box_target_distance": 1.9395268524442242,
+      "box_x": 4.051084981999604,
+      "box_y": -1.63002600346347
+    },
+    {
+      "seed": 4,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_4.zip",
+      "start_id": 8,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.3,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -17.860774725209506,
+      "box_target_distance": 1.1052770163290622,
+      "box_x": 1.9930284073251234,
+      "box_y": -0.455681351792123
+    },
+    {
+      "seed": 4,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_4.zip",
+      "start_id": 9,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.6,
+        "car_yaw": -0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -17.341554679322236,
+      "box_target_distance": 1.5519020411463587,
+      "box_x": 1.4504784303545797,
+      "box_y": -0.08592351551133859
+    },
+    {
+      "seed": 4,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_4.zip",
+      "start_id": 10,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.6,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -18.031114936615943,
+      "box_target_distance": 1.5999999999860774,
+      "box_x": 1.4000000000139226,
+      "box_y": 1.636210390116087e-10
+    },
+    {
+      "seed": 4,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_4.zip",
+      "start_id": 11,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.3,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -18.579483739143967,
+      "box_target_distance": 1.1184053974410362,
+      "box_x": 1.9034312159392657,
+      "box_y": 0.2199262031882624
+    },
+    {
+      "seed": 4,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_4.zip",
+      "start_id": 12,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.0,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -37.4321095321762,
+      "box_target_distance": 0.8097581738527835,
+      "box_x": 2.3300144054519873,
+      "box_y": 0.45478302872858045
+    },
+    {
+      "seed": 4,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_4.zip",
+      "start_id": 13,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.3,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": true,
+      "reason": "success",
+      "time_s": 0.6100000000000004,
+      "episode_return": -21.678742611732797,
+      "box_target_distance": 0.3268348005661111,
+      "box_x": 2.8050918584504108,
+      "box_y": -0.26235815828514825
+    },
+    {
+      "seed": 4,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_4.zip",
+      "start_id": 14,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.6,
+        "car_yaw": 0.08,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -18.187664136144054,
+      "box_target_distance": 1.3745868230495746,
+      "box_x": 1.6403199933742,
+      "box_y": 0.20188911234533446
+    },
+    {
+      "seed": 4,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_4.zip",
+      "start_id": 15,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.6,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -17.38340379544465,
+      "box_target_distance": 1.593019401173348,
+      "box_x": 1.40704927167992,
+      "box_y": 0.014791540123294903
+    },
+    {
+      "seed": 4,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_4.zip",
+      "start_id": 16,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": -0.3,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -17.736649235459318,
+      "box_target_distance": 1.005245698002193,
+      "box_x": 2.0395956617680358,
+      "box_y": 0.2968878920689412
+    },
+    {
+      "seed": 4,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_4.zip",
+      "start_id": 17,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.0,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -78.0347503553437,
+      "box_target_distance": 2.2815357577432667,
+      "box_x": 4.844303549135152,
+      "box_y": 1.3431119955195936
+    },
+    {
+      "seed": 4,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_4.zip",
+      "start_id": 18,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.3,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -170.9998699622688,
+      "box_target_distance": 8.52726120523521,
+      "box_x": 9.768695871426033,
+      "box_y": -5.186418789728575
+    },
+    {
+      "seed": 4,
+      "model": "models\\box_push_lidar_carton035_rewardv2_seed_4.zip",
+      "start_id": 19,
+      "start_pose": {
+        "car_x": 0.8599999999999999,
+        "car_y": 0.6,
+        "car_yaw": 0.25,
+        "box_x": 1.4,
+        "box_y": 0.0,
+        "box_yaw": 0.0
+      },
+      "success": false,
+      "reason": "timeout",
+      "time_s": 6.999999999999451,
+      "episode_return": -17.3537358677952,
+      "box_target_distance": 1.5999999999848133,
+      "box_x": 1.4000000000151867,
+      "box_y": 1.638111476886498e-10
+    }
+  ],
+  "heatmap": {
+    "columns_car_y_offset_m": [
+      -0.6,
+      -0.3,
+      0.0,
+      0.3,
+      0.6
+    ],
+    "rows_car_yaw_rad": [
+      -0.25,
+      -0.08,
+      0.08,
+      0.25
+    ],
+    "success_rate": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.2,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.2,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ]
+  }
+}

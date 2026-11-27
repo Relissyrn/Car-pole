@@ -11,21 +11,33 @@ for consecutive control steps. The simulator uses `box_push.xml`, a 0.002 s
 physics timestep, and six continuous car controls. Episodes end on success or
 truncate at the configurable horizon.
 
-The 13-value observation contains car planar position and heading, car-frame
-forward/lateral/yaw velocity, box planar position and heading, and target planar
-position. Actions are six finite values in `[-1, 1]`.
+The observation contains car planar position and heading, car-frame
+forward/lateral/yaw velocity, a 360-degree range-only LiDAR scan, and target
+planar position. The default LiDAR has 32 rays, a 4 m maximum range, and 1 cm
+Gaussian range noise; no return is reported as maximum range. The car's own
+geometry is excluded from the scan. The box pose is not exposed directly to the
+policy. Actions are six finite values in `[-1, 1]`.
 
 The shaped reward is the change in car-to-box distance and box-to-target
 distance, plus a small `-0.01` step cost and a `+10` success reward. Success
 requires the box center to remain within the configurable target radius for
-five consecutive steps by default.
+five consecutive steps by default. Reward and success also require the box to
+remain near the ground and below the configurable speed limit, preventing
+airborne/high-speed motion from receiving a false push reward. Additional
+penalties discourage car speeds above 1 m/s, losing physical contact between
+the box and the front face of the car chassis (the bumper), and pushing the box
+through or out of the target zone. Defaults are a speed-penalty weight of 1.0,
+a 1.0 contact-loss penalty, and a 2.0 target-overshoot penalty. The speed
+penalty scales with excess speed and elapsed control time; contact-loss and
+target-overshoot penalties are applied once per event.
 
 ## Curriculum and settings
 
 `BoxPushSettings` centralizes target location, target-zone radius, success hold
-time, horizon, frame skip, physics mismatch scales, and curriculum stage. The
-easy stage starts aligned and near the target. The randomized stage varies
-car/box lateral offsets, headings, and box distance.
+time, horizon, frame skip, speed and event penalty weights, physics mismatch
+scales, and curriculum stage. The easy stage starts aligned and near the
+target. The randomized stage varies car/box lateral offsets, headings, and box
+distance.
 `reset(options={"start_pose": ...})` supports exact reproducible starts.
 
 `ActionLatency` delays actions by a configurable number of control steps.
@@ -35,6 +47,9 @@ enabled or composed.
 
 Physics mismatch is evaluated on the same task by scaling box mass and ground,
 tire, and box friction at model construction.
+The box-floor sliding coefficient defaults to `0.35` (a light carton on a
+smooth hard floor); tire friction remains higher to preserve car traction.
+Change `BoxPushSettings.box_floor_friction` to explore a different surface.
 
 ## Training
 
@@ -54,6 +69,14 @@ steps in randomized starts. `--easy-steps`, `--timesteps`, `--num-envs`,
 `--box-mass-scale`, and `--friction-scale` are configurable. PPO collects full
 rollout batches, so the actual count can exceed the requested budget; the config
 records both counts and the actual steps in each stage.
+`--box-floor-friction` adjusts the carton/floor sliding coefficient; keep it the
+same for training and evaluation runs being compared.
+The speed and event penalties are configurable with `--car-speed-limit`,
+`--car-speed-penalty-per-second`, `--lost-bumper-contact-penalty`, and
+`--target-overshoot-penalty`.
+The sensor is configurable with `--lidar-num-rays`, `--lidar-max-range`, and
+`--lidar-noise-std`. Policies trained with the previous direct box-pose
+observation are incompatible and must not be evaluated in this sensor setup.
 
 ## Evaluation protocol
 
@@ -116,13 +139,72 @@ than treating the aggregate rate as uniform performance.
   [mismatch](results/mismatch.json), [episodes](results/mismatch.csv),
   [heat map](results/mismatch.svg).
 
+## Second experiment: LiDAR and carton friction (2026-11-26)
+
+Five nominal policies were retrained with seeds `0` through `4`, eight
+environments, and the same PPO settings and step budgets as the first
+experiment. Each requested 1,500,000 steps and completed 1,507,328 actual steps
+(253,952 easy-stage and 1,253,376 randomized-stage). The box-floor friction
+coefficient was `0.35`. The policy observation used a 32-ray, 360-degree
+range-only LiDAR with 4 m maximum range and 0.01 m seeded range noise; box pose
+was not provided directly.
+
+All five policies were evaluated on the same 20 fixed starts (100 episodes).
+Values are mean ± sample standard deviation over the five seeds:
+
+| Evaluation condition | Success rate | Episode return | Success time (s) | Failures |
+| --- | ---: | ---: | ---: | ---: |
+| Nominal, LiDAR and carton friction | 10.0% ± 0.0 pp | -35.983 ± 1.408 | 0.602 ± 0.006 | 90/100 |
+
+All 90 failures were timeouts. Results include all episodes; the JSON report
+also has a dedicated `failures` list.
+
+- [Evaluation report](results/lidar_carton035.json)
+- [All 100 episode records](results/lidar_carton035.csv)
+- [Fixed-start heat map](results/lidar_carton035.svg)
+- Each seed's policy and training config:
+  `models/box_push_lidar_carton035_seed_0.zip` through
+  `models/box_push_lidar_carton035_seed_4.zip` and matching `_config.json` files.
+
+## Third experiment: LiDAR, carton friction, and event penalties (2026-11-27)
+
+Five policies were trained with seeds `0` through `4` and the same PPO settings
+and budgets. Each completed 1,507,328 steps. This run used the same 0.35
+box-floor friction and LiDAR settings as the second experiment, plus a 1 m/s
+car-speed limit, speed penalty weight `1.0`, contact-loss penalty `1.0`, and
+target-overshoot penalty `2.0`.
+
+The five policies were evaluated on the same 20 fixed starts (100 episodes):
+
+| Evaluation condition | Success rate | Episode return | Success time (s) | Failures |
+| --- | ---: | ---: | ---: | ---: |
+| LiDAR, carton friction, and penalties | 12.0% ± 4.5 pp | -41.215 ± 6.267 | 0.998 ± 0.868 | 88/100 |
+
+All 88 failures were timeouts.
+
+- [Evaluation report](results/lidar_carton035_rewardv2.json)
+- [All 100 episode records](results/lidar_carton035_rewardv2.csv)
+- [Fixed-start heat map](results/lidar_carton035_rewardv2.svg)
+- Each seed's policy and training config:
+  `models/box_push_lidar_carton035_rewardv2_seed_0.zip` through
+  `models/box_push_lidar_carton035_rewardv2_seed_4.zip` and matching
+  `_config.json` files.
+
 ### Interpretation and limitations
 
-These are first-pass results and do not solve the task reliably. The latency,
-noise, and mismatch evaluations apply perturbations to the same nominal-trained
-policies; they are robustness checks, not results from separately trained
-variants. PPO settings, seeds, and training budgets were held constant for the
-five nominal policies, but no hyperparameter search or variant-specific tuning
-was performed. The `tuning_effort` values in the evaluation JSON are declared
-protocol metadata, not evidence that a tuning search was run. A fair comparison
-of separately tuned variants remains outstanding.
+The first-experiment results above were collected before ground-level/speed
+success constraints, carton-floor friction, and LiDAR observations were added.
+They describe the earlier center-only success rule with direct box-pose
+observations and are not directly comparable with the later experiments.
+
+None of the experiments solves the task reliably. The second experiment had
+10% success and the third had 12%; this small difference is not evidence that
+the new penalties improve performance. Returns are also affected by the changed
+reward function. The first experiment's latency, noise, and mismatch
+evaluations apply perturbations to the same nominal-trained policies; they are
+robustness checks, not results from separately trained variants. PPO settings,
+seeds, and training budgets were held constant, but no hyperparameter search or
+variant-specific tuning was performed. The `tuning_effort` values in the
+evaluation JSON are declared protocol metadata, not evidence that a tuning
+search was run. A fair comparison of separately tuned variants remains
+outstanding.
